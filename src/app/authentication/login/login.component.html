@@ -1,24 +1,42 @@
 <div class="container" id="container" [ngClass]="{'right-panel-active' : shouldAdd}">
     <!-- SIGN-UP  -->
     <div class="form-container sign-up-container">
-        <form action="">
+        <form #registerUserData="ngForm" [formGroup]="signUp" (ngSubmit)="getUserRegisterFormData(registerUserData.value)">
             <h1>Create Account</h1>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button type="submit">Sign Up</button>
+            <input type="text" placeholder="Username" name="username" formControlName="username" />
+            <div class="alert alert-danger show-validations" role="alert" *ngIf="signUpForm['username'] && signUpForm['username'].invalid && signUpForm['username'].touched" >
+                Username is required!
+            </div>
+            
+            <input type="email" placeholder="Email" name="email" formControlName="email" />
+            <div class="alert alert-danger show-validations" role="alert" *ngIf="signUpForm['email'] && signUpForm['email'].invalid && signUpForm['email'].touched ">
+                Email is required !
+            </div>
+
+            <input type="password" placeholder="Password" name="pass" formControlName="password" />
+            <div class="alert alert-danger show-validations" role="alert" *ngIf="signUpForm['password'] && signUpForm['password'].invalid && signUpForm['password'].touched ">
+                Password is required ! 
+            </div>
+
+            <button type="submit" >Sign Up</button>
         </form>
     </div>
     
     <!-- SIGN-IN  -->
     <div class="form-container sign-in-container">
-        <form action="">
+        <form #loginUserData="ngForm" [formGroup]="signIn" (ngSubmit)="getUserLoginFormData(loginUserData.value)" >
             <h1>Sign In</h1>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input type="email" placeholder="Email" name="email" formControlName="email" />
+            <div class="alert alert-danger show-validations" role="alert" *ngIf="signInForm['email'] && signInForm['email'].invalid && signInForm['email'].touched ">
+                Email is required !
+            </div>
+            <input type="password" placeholder="Password" name="password" formControlName="password" />
+            <div class="alert alert-danger show-validations" role="alert" *ngIf="signInForm['password'] && signInForm['password'].invalid && signInForm['password'].touched ">
+                Password is required ! 
+            </div>
             <a href="#">Forgot Password</a>
 
-            <button type="submit">Sign In</button>
+            <button type="submit" >Sign In</button>
         </form>
     </div>
 

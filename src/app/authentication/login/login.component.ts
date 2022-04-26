@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {UserAuthService} from '../../services/auth/user-auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,48 +11,54 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   shouldAdd = false;
-  shouldUp = false;
 
-  constructor() { }
+  constructor(private userData : UserAuthService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
+    console.log(this.signUp.valueChanges.subscribe);
   }
 
+  signUp = new FormGroup({
+    username : new FormControl('', [Validators.required]),
+    email : new FormControl('', [Validators.required, Validators.email]),
+    password : new FormControl('', [Validators.required, Validators.minLength(8)])
+  })
 
-  public signUpShow = false;
-  public signInshow = false;
-  public contShow = false;
+  signIn = new FormGroup({
+    email : new FormControl('', [Validators.required, Validators.email]),
+    password : new FormControl('', [Validators.required, Validators.minLength(8)])
+  })
 
-  @ViewChild("#signup") up : any;
-  @ViewChild("#signin") in : any;
-  @ViewChild("#container") cont : any;
-  
-  signUpAddClass(){
-    this.signUpShow = !this.signUpShow;
-
-    if(this.signUpShow){
-      this.up.nativeElement.classList.add("right-panel-active");
-    }else{
-      this.up.nativeElement.classList.remove("right-panel-active");
-    }
+  get signUpForm(){
+    return this.signUp.controls;
   }
-  signInAddClass(){
-    this.signInshow = !this.signInshow;
 
-    if(this.signInshow){
-      this.up.nativeElement.classList.add("right-panel-active");
-    }else{
-      this.up.nativeElement.classList.remove("right-panel-active");
-    }
+  get signInForm(){
+    return this.signIn.controls;
   }
-  contAddClass(){
-    this.contShow = !this.contShow
 
-    if(this.contShow){
-      this.up.nativeElement.classList.add("right-panel-active");
-    }else{
-      this.up.nativeElement.classList.remove("right-panel-active");
-    }
+  getUserLoginFormData(data : any){
+    const {email, password} = data;
+    this.userData.login(email, password).subscribe(result => {
+      console.log(result);
+    },
+    err => {
+      console.log(err);
+    })
+
+  }
+
+  getUserRegisterFormData(data : any){
+   const {username, email, password} = data;
+    this.userData.registerUserData(username, email, password).subscribe(
+      data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+      }
+    )
+
   }
 
 }

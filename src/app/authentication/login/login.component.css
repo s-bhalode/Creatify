@@ -1,3 +1,4 @@
+/* ------------------------SIGNIN_SIGNUP_FORM----------------------------------- */
 * {
     box-sizing: border-box;
 }
@@ -15,8 +16,8 @@ h1{
     font-weight: bold;
     margin: 0;
     letter-spacing: 1px;
-    position: relative;
-    top : -75px;
+    position: fixed;
+    top : 50px;
 }
 p{
     font-size: 14px;
@@ -184,3 +185,14 @@ a {
 }
 
 
+/* -------------------------------VALIDATIONS-------------------------- */
+.show-validations{
+    width: 150px;
+    height: fit-content;
+    padding: 1px;
+    position: relative;
+    top: -10px;
+    margin: 0;
+    left: -60px;
+    font-size: 10px;
+}

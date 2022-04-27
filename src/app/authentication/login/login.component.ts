@@ -45,7 +45,6 @@ export class LoginComponent implements OnInit {
     err => {
       console.log(err);
     })
-
   }
 
   getUserRegisterFormData(data : any){

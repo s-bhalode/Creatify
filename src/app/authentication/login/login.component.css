@@ -65,7 +65,7 @@ button{
     color: white;
     font-size: 12px;
     font-weight: bold;
-    padding: 12px 45px;
+    padding: 10px 35px;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in;
@@ -79,6 +79,15 @@ button:focus{
 button.signin, button.signup{
     background: transparent;
     border-color: white;
+}
+.role-section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.role{
+    background-color: #2bd8ff;
+    border: 1px solid #2bd8ff;
 }
 .form-container {
     position: absolute;

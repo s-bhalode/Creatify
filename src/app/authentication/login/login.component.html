@@ -7,18 +7,28 @@
             <div class="alert alert-danger show-validations" role="alert" *ngIf="signUpForm['username'] && signUpForm['username'].invalid && signUpForm['username'].touched" >
                 Username is required!
             </div>
+
             
             <input type="email" placeholder="Email" name="email" formControlName="email" />
             <div class="alert alert-danger show-validations" role="alert" *ngIf="signUpForm['email'] && signUpForm['email'].invalid && signUpForm['email'].touched ">
                 Email is required !
             </div>
-
             <input type="password" placeholder="Password" name="pass" formControlName="password" />
             <div class="alert alert-danger show-validations" role="alert" *ngIf="signUpForm['password'] && signUpForm['password'].invalid && signUpForm['password'].touched ">
                 Password is required ! 
             </div>
 
-            <button type="submit" >Sign Up</button>
+            <div class="role-section">     
+                <div mdbDropdown class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle role" type="button" id="dropdownMenuButton" aria-expanded="false" mdbDropdownToggle >Role</button>
+                    <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Designer</a></li>
+                        <li><a class="dropdown-item" href="#">Recruiter</a></li>
+                    </ul>
+                </div>
+                <button type="submit" >Sign Up</button>
+            </div>
+            
         </form>
     </div>
     

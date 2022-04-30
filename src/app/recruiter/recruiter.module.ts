@@ -20,6 +20,14 @@ import { RecruiterDashboardComponent } from './recruiter-dashboard/recruiter-das
   ],
   imports: [
     CommonModule
+  ],
+  exports : [
+    RecruiterActivityComponent,
+    RecruiterDashboardComponent,
+    RecruiterNetworkComponent,
+    RecruiterPostComponent,
+    RecruiterProfileComponent,
+    RecruiterProfileSettingsComponent
   ]
 })
 export class RecruiterModule { }

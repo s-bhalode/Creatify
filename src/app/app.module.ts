@@ -23,7 +23,7 @@ import { LoginComponent } from './authentication/login/login.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    NavbarComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +34,9 @@ import { LoginComponent } from './authentication/login/login.component';
     MatIconModule,
     MatToolbarModule,
     AdminModule,
-    DesignerModule,
     RecruiterModule,
-    AuthenticationModule
+    AuthenticationModule,
+    DesignerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

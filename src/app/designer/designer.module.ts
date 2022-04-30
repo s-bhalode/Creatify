@@ -8,6 +8,7 @@ import { DesignerJobsComponent } from './designer-jobs/designer-jobs.component';
 import { DesignerProfileComponent } from './designer-profile/designer-profile.component';
 import { DesignerProfileSettingsComponent } from './designer-profile-settings/designer-profile-settings.component';
 import { DesignerDashboardComponent } from './designer-dashboard/designer-dashboard.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -15,13 +16,23 @@ import { DesignerDashboardComponent } from './designer-dashboard/designer-dashbo
     DesignerActivityComponent,
     DesignerDashboardComponent,
     DesignerJobsComponent,
+    DesignerProfileComponent,
     DesignerNetworkComponent,
     DesignerPostComponent,
-    DesignerProfileComponent,
     DesignerProfileSettingsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatIconModule
+  ],
+  exports : [
+    DesignerJobsComponent,
+    DesignerProfileComponent,
+    DesignerActivityComponent,
+    DesignerDashboardComponent,
+    DesignerNetworkComponent,
+    DesignerPostComponent,
+    DesignerProfileSettingsComponent
   ]
 })
 export class DesignerModule { }

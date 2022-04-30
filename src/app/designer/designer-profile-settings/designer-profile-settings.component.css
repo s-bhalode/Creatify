@@ -1,0 +1,83 @@
+:root{
+    --navBg : #D4FEF8;
+    --boxShadow : #808b93;
+    --searchBg : #cfd3d3;
+}
+.container1{
+    background-color: rgb(255, 255, 255);
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    border-radius: 19px;
+    /* border: 4px solid rgb(173, 169, 169); */
+    border-style: outset;
+    margin: 40px 95px;
+    padding: 0px 0px;
+    /* color: aqua; */
+    width: 80%;
+}
+.profile-view{
+        text-decoration: none;
+        font-size: 18px;
+        margin: 106px 42px;
+        padding: 13px 30px;
+        display: block; 
+        list-style: none;
+        color: black;
+}
+.Posts ,.Connections ,.Rating{
+    text-decoration: none;
+    font-size: 23px;
+    margin: 80px 44px;
+    padding: 3px 40px;
+    display: flex; 
+    justify-content: center;
+    list-style: none;
+    /* border: 3px solid rgb(37, 48, 198);  */
+    border-radius: 15px; 
+}
+.Edit-profile{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    height: 800px;
+    display: flex;
+    border-radius: 19px;
+    border-style: outset;
+    margin: 40px 95px;
+    padding: 0px 0px;
+    width: 80%;
+}
+.edit{
+    font-size: 20px;
+    font-weight:400;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 33px 59px;
+}
+.form-box{
+ margin: 80px -65px;
+}
+.form-group{
+    width: 180%;
+    margin: 20px 10px;
+    font-size: 25px;
+}
+.form-control{
+    color: #000000;
+    background-color: #D4FEF8;
+    border-radius: 10px;
+    height: 40px;
+}
+.user-bio{
+    height: 100px;
+}
+.btn{
+    margin: 0px 0px;
+}
+.save-btn{
+    margin: 0px;
+    padding: 0px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: darkblue;
+    color: aliceblue;
+}

@@ -9,6 +9,10 @@ import { DesignerProfileComponent } from './designer-profile/designer-profile.co
 import { DesignerProfileSettingsComponent } from './designer-profile-settings/designer-profile-settings.component';
 import { DesignerDashboardComponent } from './designer-dashboard/designer-dashboard.component';
 
+import { MatIconModule } from '@angular/material/icon';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,14 @@ import { DesignerDashboardComponent } from './designer-dashboard/designer-dashbo
     DesignerProfileSettingsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    MatAutocompleteModule
+  ],
+  exports : [
+    DesignerJobsComponent
   ]
 })
 export class DesignerModule { }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DesignerNetworkComponent } from './designer-network/designer-network.component';
@@ -22,6 +22,14 @@ import { DesignerDashboardComponent } from './designer-dashboard/designer-dashbo
   ],
   imports: [
     CommonModule
+  ],
+  exports : [
+    DesignerJobsComponent,
+    DesignerActivityComponent,
+    DesignerDashboardComponent,
+    DesignerNetworkComponent,
+    DesignerPostComponent,
+    DesignerProfileComponent
   ]
 })
 export class DesignerModule { }

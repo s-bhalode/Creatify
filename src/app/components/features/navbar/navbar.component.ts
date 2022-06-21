@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TokenStorageService} from '../../../services/token-storage.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,50 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  role : string | undefined ;
+  isLoggedIn : boolean = false;
+  showAdminDashboard : boolean = false;
+  showDesignerDashboard : boolean = false;
+  showRecruiterDashboard : boolean = false;
+  username ?: string;
+
+  constructor(private tokenStorageservice : TokenStorageService) { }
 
   ngOnInit(): void {
+    this.isLoggedIn = !!this.tokenStorageservice.getToken();
+    if(this.isLoggedIn){
+      const user = this.tokenStorageservice.getUser();
+      console.warn(user);
+      console.warn(user.role);
+      this.role = user.role;
+      // this.showAdminDashboard = this.role.includes('admin');
+      
+      // this.showDesignerDashboard = this.role.includes('designer');
+      // this.showRecruiterDashboard = this.role.includes('recruiter');
+      this.username = user.username;
+      
+      if(this.role === "designer"){
+          this.showAdminDashboard = false;
+          this.showDesignerDashboard = true;
+          this.showRecruiterDashboard = false;
+          console.warn("admin dashboard : " +this.showAdminDashboard);
+          console.warn("designer dashboard : " +this.showDesignerDashboard);
+          console.warn("recruiter dashboard : " +this.showRecruiterDashboard);
+      }else if(this.role === "recruiter" ){
+          this.showAdminDashboard = false;
+          this.showDesignerDashboard = false;
+          this.showRecruiterDashboard = true;
+      }else if(this.role === "admin"){
+          this.showAdminDashboard = true;
+          this.showDesignerDashboard = false;
+          this.showRecruiterDashboard = false;
+      }
+
+    }
+  }
+  logout() : void {
+    this.tokenStorageservice.logOut();
+    window.location.reload();
   }
 
 }

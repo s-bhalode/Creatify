@@ -17,25 +17,37 @@
             <div class="alert alert-danger show-validations" role="alert" *ngIf="signUpForm['password'] && signUpForm['password'].invalid && signUpForm['password'].touched ">
                 Password is required ! 
             </div>
-
-            <div class="role-section">     
-                <div mdbDropdown class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle role" type="button" id="dropdownMenuButton" aria-expanded="false" mdbDropdownToggle >Role</button>
-                    <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="#">Designer</a></li>
-                        <li><a class="dropdown-item" href="#">Recruiter</a></li>
-                    </ul>
-                </div>
-                <button type="submit" >Sign Up</button>
+            <div class="role-section">
+            <label for="gender" class="text-light">Role</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="role" formControlName="role" value="designer">
+                <label for="radio-2" class="radio-label">Designer</label>
             </div>
-            
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="role" formControlName="role" value="recruiter" >
+                <label for="radio-3" class="radio-label">Recruiter</label>
+            </div>
+            </div>
+                <div class="alert alert-danger show-validations" role="alert" *ngIf="signUpForm['role'] && signUpForm['role'].invalid && signUpForm['role'].touched ">
+                Please select your domain !
+            </div>
+            <button type="submit" >Sign Up</button>
+
+            <div class="alert alert-warning" *ngIf="registerUserData.submitted && isRegisterFailed">
+                Signup failed ! 
+                <br />
+                {{ errorMessage }}
+            </div>
+            <div class="alert alert-success" *ngIf="isSuccessful">
+                Your registration is successful !
+            </div>
         </form>
     </div>
     
     <!-- SIGN-IN  -->
     <div class="form-container sign-in-container">
         <form #loginUserData="ngForm" [formGroup]="signIn" (ngSubmit)="getUserLoginFormData(loginUserData.value)" >
-            <h1>Sign In</h1>
+            <h1 class="signin-title">Sign In</h1>
             <input type="email" placeholder="Email" name="email" formControlName="email" />
             <div class="alert alert-danger show-validations" role="alert" *ngIf="signInForm['email'] && signInForm['email'].invalid && signInForm['email'].touched ">
                 Email is required !
@@ -46,15 +58,23 @@
             </div>
             <a href="#">Forgot Password</a>
 
-            <button type="submit" >Sign In</button>
+            <button type="submit">Sign In</button>
+
+            <div class="alert alert-danger" role="alert" *ngIf="loginUserData.submitted && isLoggedInFailed">
+                Login failed !!
+            </div>
+            <div class="alert alert-success" *ngIf="isLoggedIn">
+                <!-- <h1>Logged in as {{ roles }} <a routerLink="designer-dashboard">next</a></h1> -->
+                Logged in as {{ roles }}
+            </div>
         </form>
     </div>
 
     <div class="overlay-container">
-        <div class="overlay">
+        <div class="overlay" >
 
         <!-- SIGNIN_OVERLAY_SLIDER -->
-            <div class="overlay-panel overlay-left">
+            <div class="overlay-panel overlay-left" *ngIf="showLoginForm">
                 <h1>Hello !!</h1>
                 <p>Happy to see you here</p>
 
@@ -63,11 +83,13 @@
         </div>
 
         <!-- SIGNUP_OVERLAY_CONTAINER -->
-        <div class="overlay-panel overlay-right">
+        <div class="overlay-panel overlay-right" *ngIf="showLoginForm">
             <h1>Hello !!</h1>
             <p>Enter the your personal details and joins us</p>
             <button id="signup" (click)="shouldAdd = !shouldAdd">Sign Up</button>
         </div>
     </div>
+
+    
 
 </div>

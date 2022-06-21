@@ -45,6 +45,7 @@ mat-toolbar{
 }
 
 .user{
+    width: 150px;
     display: flex;
     justify-content:space-between;
     font-size: 16px;
@@ -54,6 +55,52 @@ mat-toolbar{
     position: relative;
     bottom: 5px;
 }
+
 mat-icon{
     margin-top: 10px;
+}
+
+.before-login{
+    display: flex;
+    justify-content: space-between;
+}
+.header span{
+    font-variant: small-caps;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+.join a{
+    text-decoration: none;
+    padding: 5px 20px 5px 20px;
+    font-size: 16px;
+    border: 1px solid #13476A;
+    margin-left: 20px;
+    color: #13476A;
+    border-radius: 10px;
+}
+
+.post-btn{
+    background-color: #FFB98B;
+    border-color: 1px solid #0C6D6D;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0 40px 0 40px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.details{
+    position: absolute;
+    right: 7%;
+}
+
+.designer-menu, .recruiter-menu{
+    position: absolute;
+    left: 20%;
+}
+.logout{
+    width: fit-content;
+    position: absolute;
+    right: 2%;
 }

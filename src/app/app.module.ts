@@ -40,14 +40,14 @@ import { HomeComponent } from './components/home/home.component';
     MatIconModule,
     MatToolbarModule,
     AdminModule,
-    DesignerModule,
     RecruiterModule,
     AuthenticationModule,
     NgbModule,
     MatOptionModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    DesignerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

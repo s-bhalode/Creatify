@@ -7,6 +7,8 @@ import { DesignerDashboardComponent } from './designer/designer-dashboard/design
 import { DesignerProfileComponent } from './designer/designer-profile/designer-profile.component';
 import { RecruiterDashboardComponent } from './recruiter/recruiter-dashboard/recruiter-dashboard.component';
 
+import {AuthGuardService} from './services/auth-guard.service';
+
 const routes: Routes = [
   {path : 'home', component : HomeComponent},
   {path : 'login', component : LoginComponent},
@@ -16,6 +18,24 @@ const routes: Routes = [
   {path : 'recruiter', component : RecruiterDashboardComponent},
   {path : 'admin', component : AdminDashboardComponent}
 ];
+
+// const routes : Routes = [
+//   {
+//     path : '',
+//     redirectTo : '/home',
+//     pathMatch : 'full'
+//   },
+//   {
+//     path : '',
+//     component : DesignerDashboardComponent,
+//     canActivate : [AuthGuardService],
+//     children : [
+      
+//     ]
+//   }
+// ]
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

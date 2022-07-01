@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import {MatIconModule} from '@angular/material/icon';
 import { RecruiterActivityComponent } from './recruiter-activity/recruiter-activity.component';
 import { RecruiterPostComponent } from './recruiter-post/recruiter-post.component';
 import { RecruiterNetworkComponent } from './recruiter-network/recruiter-network.component';
@@ -19,7 +20,8 @@ import { RecruiterDashboardComponent } from './recruiter-dashboard/recruiter-das
     RecruiterProfileSettingsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatIconModule
   ],
   exports : [
     RecruiterActivityComponent,

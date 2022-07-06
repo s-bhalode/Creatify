@@ -10,6 +10,9 @@ import { DesignerProfileSettingsComponent } from './designer-profile-settings/de
 import { DesignerDashboardComponent } from './designer-dashboard/designer-dashboard.component';
 import { MatIconModule } from '@angular/material/icon';
 
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,11 @@ import { MatIconModule } from '@angular/material/icon';
     DesignerDashboardComponent,
     DesignerNetworkComponent,
     DesignerPostComponent,
-    DesignerProfileSettingsComponent
+    DesignerProfileSettingsComponent,
+    MatIconModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    MatAutocompleteModule
   ]
 })
 export class DesignerModule { }

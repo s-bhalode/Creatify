@@ -1,0 +1,136 @@
+*{
+    font-weight: 500;
+}
+
+/* Job Nav */
+
+.job-nav{
+    margin: 10px;
+    margin-top: 40px;
+    width: 1000px;
+    height: 130px;
+    border: 2px solid rgb(150, 148, 148);
+    border-radius: 20px;
+    margin-left: 20px;
+    box-shadow: 0px 2px 5px rgb(167, 159, 159);
+}
+
+.inputs{
+    margin-top: -10px;
+    display: flex;
+}
+.inputs input{
+    border: transparent;
+    width: 100%;
+    padding: 0px 35px;
+}
+.inputs input::placeholder{
+    color: black;
+}
+.input-1{
+    display: flex;
+    margin-top: 30px;
+}
+.input-2{
+    margin-left: auto;
+    display: flex;
+    margin-top: 30px;
+}
+.search{
+    padding: 5px;
+}
+
+.dropdown select{
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+
+.drp{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Filter Jobs Section */
+
+.filter-jobs{
+    width: 250px;
+    height: 400px;
+    margin: 10px;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 2px solid rgb(150, 148, 148);
+    position: sticky;
+    box-shadow: 0px 2px 5px rgb(167, 159, 159);
+}
+
+.filter-jobs p{
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.filter-jobs-checkboxes{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.filter-job-checkbox{
+    font-weight: bold;
+    margin: 5px;
+    color: blue;
+}
+
+/* job details */
+
+.jobs{
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 40px;
+}
+
+.jobs select{
+    border-radius: 15px;
+    padding: 5px 20px;
+}
+
+.job-details{
+    width: 1000px;
+    height: 150px;
+    border: 2px solid rgb(150, 148, 148);
+    box-shadow: 0px 2px 5px rgb(167, 159, 159);
+    border-radius: 10px;
+    margin: -10px;
+    margin-top: 10px;
+}
+
+.company-name{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    margin-right: 140px;
+    margin-left: 110px;
+    margin-bottom: -20px;
+}
+
+.job-specification{
+    display: flex;
+    margin: 10px;
+    justify-content: space-around;
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+.jobs-detailss{
+    display: flex;
+    margin-left: 110px;
+}
+.jobs-type{
+    padding: 0 10px;
+    border-radius: 10px;
+    margin: -10px 40px;
+    margin-left: 0px;
+    border: 2px solid black;
+    background: cyan;
+}

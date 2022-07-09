@@ -10,6 +10,7 @@ export class DesignerPostComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

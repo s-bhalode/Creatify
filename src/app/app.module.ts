@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,17 +17,23 @@ import { AuthenticationModule } from './authentication/authentication.module';
 import { NavbarComponent } from './components/features/navbar/navbar.component';
 import { LoginComponent } from './authentication/login/login.component';
 
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 
+//import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+//import '@popperjs/core';
+import { MatOptionModule } from '@angular/material/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,8 +47,16 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
     AdminModule,
     RecruiterModule,
     AuthenticationModule,
+    //NgbModule,
+    MatOptionModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     DesignerModule
     
+  ],
+  schemas : [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [],
   bootstrap: [AppComponent]

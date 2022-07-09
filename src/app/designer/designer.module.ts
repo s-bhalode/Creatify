@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DesignerNetworkComponent } from './designer-network/designer-network.component';
@@ -42,8 +42,11 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     DesignerDashboardComponent,
     DesignerNetworkComponent,
     DesignerPostComponent,
-    DesignerProfileSettingsComponent
-  ]
+    CommonModule,
+    DesignerProfileSettingsComponent,
+    
+  ],
+  schemas : [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DesignerModule {
     

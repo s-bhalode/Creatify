@@ -25,32 +25,71 @@
         </div>
     </div>
     <!-- edit profile -->
-    <div class="Add-profile-info">
-        <div class="Edit-profile">
-            <div>
-                <h3 class="edit">Edit Profile</h3>
-            </div>
-            
-             <div class="form-box">
-                <div class="form-group">
-                    <h2>Name</h2>
-                    <input type="text" class="form-control" id="usr" placeholder="David warner">
+    
+        <div class="container Edit-profile">
+            <h3 class="edit">Edit Profile</h3>
+            <!-- form-group -->
+            <!-- <div class="row"> -->
+                
+                <!-- <div class="col-8">
+                    <div class="form-box">
+                        <div class="form-group">
+                            <h2>Name</h2>
+                            <input type="text" class="form-control" id="usr" placeholder="David warner">
+                        </div>
+                        <div class="form-group">
+                            <h2>Bio</h2>
+                            <input type="text" class="form-control user-bio" id="bio" placeholder="Add your bio">
+                        </div>
+                        <div class="form-group">
+                            <h2>Skills</h2>
+                             <input type="text" class="form-control" id="contact" placeholder="Skills">
+                         </div>
+                        <div class="form-group">
+                           <h2>Contact</h2>
+                            <input type="text" class="form-control" id="contact" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <h2>Portfolio / Resume</h2>
+                            <input type="text" class="form-control" id="portfolio" placeholder="http://.....">
+                        </div>
+                        <div class="btn col-4"> <button class=" save-btn ">Save</button></div>
+                     </div>
+                     
                 </div>
-                <div class="form-group">
-                    <h2>Bio</h2>
-                    <input type="text" class="form-control user-bio" id="bio" placeholder="Add your bio">
+            </div> -->
+                <!-- Form group -->
+                <div class="row">
+                    <form #UpdateUserData="ngForm" class="col-8" (ngSubmit)="getUserFormData(UpdateUserData.value)" >
+                        <div class="form-group" >
+                            <label for="">Name</label>
+                            <input  formControlName="Name" type="text" class="form-control" placeholder="Name" value="designer.username">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="">Bio</label>
+                            <input formControlName="Bio" type="text" class="form-control bio" placeholder="Add your Bio" value="designer.bio">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="">Skills</label>
+                            <input formControlName="Skills" type="text" class="form-control" placeholder="Skills" value="designer.skills">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="">Contact</label>
+                            <input formControlName="Email" type="text" class="form-control" placeholder="Email" value="designer.email">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="">Portfolio / Resume</label>
+                            <input formControlName="Portfolio" type="url" class="form-control" placeholder="https//:....." value="designer.portfolio_url">
+                        </div>
+                        <!-- {{EditProfile.value | json}} -->
+                        <button class="btn save-btn ml-2">save</button>
+                    </form>
+                    
                 </div>
-                <div class="form-group">
-                   <h2>Contact</h2>
-                    <input type="text" class="form-control" id="contact" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <h2>Portfolio / Resume</h2>
-                    <input type="text" class="form-control" id="portfolio" placeholder="http://.....">
-                </div>
-             </div>
-            <!-- <button class="btn save-btn ">Save</button> -->
-        </div>
+                
     </div>
-    <!-- form-group -->
 </div>

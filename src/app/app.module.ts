@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule , FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbar, MatToolbarModule } from '@angular/material/toolbar';
@@ -16,6 +16,10 @@ import { AuthenticationModule } from './authentication/authentication.module';
 
 import { NavbarComponent } from './components/features/navbar/navbar.component';
 import { LoginComponent } from './authentication/login/login.component';
+
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+
 
 
 
@@ -30,6 +34,7 @@ import { LoginComponent } from './authentication/login/login.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
     MatIconModule,
     MatToolbarModule,
@@ -37,6 +42,7 @@ import { LoginComponent } from './authentication/login/login.component';
     RecruiterModule,
     AuthenticationModule,
     DesignerModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

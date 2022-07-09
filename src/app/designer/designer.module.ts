@@ -10,6 +10,10 @@ import { DesignerProfileSettingsComponent } from './designer-profile-settings/de
 import { DesignerDashboardComponent } from './designer-dashboard/designer-dashboard.component';
 import { MatIconModule } from '@angular/material/icon';
 
+import { FormControl, FormGroup, Validators,FormBuilder  } from '@angular/forms';
+import { UserProfileSettingsService } from 'src/app/services/user-profile-settings.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,10 @@ import { MatIconModule } from '@angular/material/icon';
   ],
   imports: [
     CommonModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule,
+    
   ],
   exports : [
     DesignerJobsComponent,
@@ -35,4 +42,8 @@ import { MatIconModule } from '@angular/material/icon';
     DesignerProfileSettingsComponent
   ]
 })
-export class DesignerModule { }
+export class DesignerModule {
+    
+     
+
+ }

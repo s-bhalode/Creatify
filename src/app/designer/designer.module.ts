@@ -9,30 +9,39 @@ import { DesignerProfileComponent } from './designer-profile/designer-profile.co
 import { DesignerProfileSettingsComponent } from './designer-profile-settings/designer-profile-settings.component';
 import { DesignerDashboardComponent } from './designer-dashboard/designer-dashboard.component';
 import { RouterModule } from '@angular/router';
-
+import { MatIconModule } from '@angular/material/icon';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
     DesignerActivityComponent,
     DesignerDashboardComponent,
     DesignerJobsComponent,
+    DesignerProfileComponent,
     DesignerNetworkComponent,
     DesignerPostComponent,
-    DesignerProfileComponent,
     DesignerProfileSettingsComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    MatAutocompleteModule
   ],
   exports : [
     DesignerJobsComponent,
+    DesignerProfileComponent,
     DesignerActivityComponent,
     DesignerDashboardComponent,
     DesignerNetworkComponent,
     DesignerPostComponent,
     DesignerProfileComponent,
     DesignerProfileSettingsComponent
-  ]
+  ],
+  schemas : [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DesignerModule { }

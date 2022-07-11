@@ -16,8 +16,9 @@ import { AuthenticationModule } from './authentication/authentication.module';
 
 import { NavbarComponent } from './components/features/navbar/navbar.component';
 import { LoginComponent } from './authentication/login/login.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import '@popperjs/core';
+
+//import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+//import '@popperjs/core';
 import { MatOptionModule } from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -44,14 +45,17 @@ import { RecruiterAuthGuard } from './services/recruiter-auth.guard';
     MatIconModule,
     MatToolbarModule,
     AdminModule,
-    DesignerModule,
     RecruiterModule,
     AuthenticationModule,
-    NgbModule,
+    //NgbModule,
     MatOptionModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    DesignerModule
+  ],
+  schemas : [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [AuthGuard, AdminAuthGuard, DesignerAuthGuard, RecruiterAuthGuard],
   bootstrap: [AppComponent]

@@ -31,6 +31,7 @@ import {MatFormField, MatFormFieldModule} from '@angular/material/form-field';
     RecruiterActivityComponent,
     RecruiterDashboardComponent,
     RecruiterNetworkComponent,
+    RecruiterPostComponent,
     RecruiterProfileComponent,
     RecruiterProfileSettingsComponent
   ]

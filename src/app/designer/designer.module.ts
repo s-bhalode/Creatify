@@ -1,4 +1,4 @@
-import { NgModule} from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DesignerNetworkComponent } from './designer-network/designer-network.component';
@@ -8,6 +8,7 @@ import { DesignerJobsComponent } from './designer-jobs/designer-jobs.component';
 import { DesignerProfileComponent } from './designer-profile/designer-profile.component';
 import { DesignerProfileSettingsComponent } from './designer-profile-settings/designer-profile-settings.component';
 import { DesignerDashboardComponent } from './designer-dashboard/designer-dashboard.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -18,10 +19,11 @@ import { DesignerDashboardComponent } from './designer-dashboard/designer-dashbo
     DesignerNetworkComponent,
     DesignerPostComponent,
     DesignerProfileComponent,
-    DesignerProfileSettingsComponent
+    DesignerProfileSettingsComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports : [
     DesignerJobsComponent,
@@ -29,7 +31,8 @@ import { DesignerDashboardComponent } from './designer-dashboard/designer-dashbo
     DesignerDashboardComponent,
     DesignerNetworkComponent,
     DesignerPostComponent,
-    DesignerProfileComponent
+    DesignerProfileComponent,
+    DesignerProfileSettingsComponent
   ]
 })
 export class DesignerModule { }

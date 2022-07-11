@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DesignerNetworkComponent } from './designer-network/designer-network.component';
@@ -8,6 +8,7 @@ import { DesignerJobsComponent } from './designer-jobs/designer-jobs.component';
 import { DesignerProfileComponent } from './designer-profile/designer-profile.component';
 import { DesignerProfileSettingsComponent } from './designer-profile-settings/designer-profile-settings.component';
 import { DesignerDashboardComponent } from './designer-dashboard/designer-dashboard.component';
+import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
@@ -21,10 +22,11 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     DesignerProfileComponent,
     DesignerNetworkComponent,
     DesignerPostComponent,
-    DesignerProfileSettingsComponent
+    DesignerProfileSettingsComponent,
   ],
   imports: [
     CommonModule,
+    RouterModule,
     MatIconModule,
     MatCheckboxModule,
     MatSelectModule,
@@ -37,9 +39,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     DesignerDashboardComponent,
     DesignerNetworkComponent,
     DesignerPostComponent,
-    CommonModule,
-    DesignerProfileSettingsComponent,
-    
+    DesignerProfileComponent,
+    DesignerProfileSettingsComponent
   ],
   schemas : [CUSTOM_ELEMENTS_SCHEMA]
 })

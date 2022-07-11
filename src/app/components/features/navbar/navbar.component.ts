@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   showDesignerDashboard : boolean = false;
   showRecruiterDashboard : boolean = false;
   username ?: string;
+  id : any;
 
   constructor(private tokenStorageservice : TokenStorageService) { }
 
@@ -24,6 +25,7 @@ export class NavbarComponent implements OnInit {
       console.warn(user);
       console.warn(user.role);
       this.role = user.role;
+      this.id = user.id;
       // this.showAdminDashboard = this.role.includes('admin');
       
       // this.showDesignerDashboard = this.role.includes('designer');

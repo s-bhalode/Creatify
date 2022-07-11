@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {} from "../services/token-storage.service.spec";
+import { TokenStorageService } from './token-storage.service';
 
 const AUTH_API = 'http://localhost:3000/api/auth/';
 
@@ -13,7 +15,14 @@ const httpOptions : object = {
 })
 export class AuthService {
 
-  constructor(private http : HttpClient) { }
+  private redirectUrl : string = '/';
+  private loginUrl : string = '/login';
+  private isLoggedIn : boolean = false;
+  private loggedInUser : any;
+  private currentUrl : string = '/';
+
+  constructor(private http : HttpClient,
+              private tokenStorageService : TokenStorageService) { }
   
   login(email : string, password : string) : Observable<any>{
     return this.http.post(AUTH_API + 'signin', {
@@ -29,6 +38,39 @@ export class AuthService {
       password,
       role
     }, httpOptions);
+  }
+
+  isUserLoggedIn() : boolean {
+    this.isLoggedIn = !!this.tokenStorageService.getToken();
+    return this.isLoggedIn;
+  }
+
+  getRedirectUrl() : string {
+    return this.redirectUrl;
+  }
+
+  setRedirectUrl(url : string) : void {
+    this.redirectUrl = url;
+  }
+
+  getLoginUrl() : string {
+    return this.loginUrl;
+  }
+
+  getCurrentUrl() : string {
+    this.currentUrl = this.redirectUrl;
+    return this.currentUrl;
+  }
+
+  getLoggedInUser(){
+    if(this.isLoggedIn){
+      this.loggedInUser = this.tokenStorageService.getUser();
+    }
+    return this.loggedInUser;
+  }
+
+  logoutUser() : void {
+    this.isLoggedIn = false;
   }
 
 }

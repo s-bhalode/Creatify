@@ -7,18 +7,18 @@
             <input type="text" placeholder="Search" />
         </div>
         <div class="tabs col-7 designer-menu" *ngIf="isLoggedIn">
-            <a *ngIf="showDesignerDashboard" routerLink="designer-dashboard" >Home</a>
-            <a *ngIf="showDesignerDashboard" routerLink="designer-post">Post</a>
-            <a *ngIf="showDesignerDashboard" routerLink="designer-activity" >Activity</a>
-            <a *ngIf="showDesignerDashboard" routerLink="designer-jobs">Jobs</a>
-            <a *ngIf="showDesignerDashboard" routerLink="designer-network" >Connections</a>
+            <a *ngIf="showDesignerDashboard" routerLink="designer/" >Home</a>
+            <a *ngIf="showDesignerDashboard" routerLink="designer/designer-post">Post</a>
+            <a *ngIf="showDesignerDashboard" routerLink="designer/designer-activity" >Activity</a>
+            <a *ngIf="showDesignerDashboard" routerLink="designer/designer-jobs">Jobs</a>
+            <a *ngIf="showDesignerDashboard" routerLink="designer/designer-network" >Connections</a>
 
         </div>
         <div class="tabs col-7 recruiter-menu" *ngIf="isLoggedIn">
-            <a *ngIf="showRecruiterDashboard" routerLink="recruiter-dashboard" >Home</a>
-            <a *ngIf="showRecruiterDashboard" routerLink="recruiter-activity" >Activity</a>
-            <a *ngIf="showRecruiterDashboard" routerLink="recruiter-network" >Network</a>
-            <button *ngIf="showRecruiterDashboard" routerLink="recruiter-post" class="post-btn" >Post</button>
+            <a *ngIf="showRecruiterDashboard" routerLink="recruiter/" >Home</a>
+            <a *ngIf="showRecruiterDashboard" routerLink="recruiter/recruiter-activity" >Activity</a>
+            <a *ngIf="showRecruiterDashboard" routerLink="recruiter/recruiter-network" >Network</a>
+            <button *ngIf="showRecruiterDashboard" routerLink="recruiter/recruiter-post" class="post-btn" >Post</button>
         </div>
 
         <div class="tabs col-7 admin-menu" *ngIf="isLoggedIn">
@@ -26,32 +26,32 @@
         </div>
 
         <div class="user col-2 details" *ngIf="isLoggedIn">
-            <a *ngIf="showDesignerDashboard" class="user-profile" routerLink="designer-profile">
+            <a *ngIf="showDesignerDashboard" class="user-profile" routerLink="designer/designer-profile/{{id}}">
                 <mat-icon class="material-symbols-outlined">account_circle</mat-icon>
             </a>
-            <a *ngIf="showDesignerDashboard" class="username" routerLink="designer-profile" > {{username}} 
+            <a *ngIf="showDesignerDashboard" class="username" routerLink="designer/designer-profile/{{id}}" > {{username}} 
             </a>
-            <a *ngIf="showDesignerDashboard" class="settings" routerLink="designer-profile-settings" >
+            <a *ngIf="showDesignerDashboard" class="settings" routerLink="designer/designer-profile-settings/{{id}}" >
                 <mat-icon class="material-symbols-outlined">settings</mat-icon>
             </a>
         </div>
 
         <div class="user col-2 details" *ngIf="isLoggedIn ">
-            <a *ngIf="showRecruiterDashboard" class="user-profile" routerLink="recruiter-profile">
+            <a *ngIf="showRecruiterDashboard" class="user-profile" routerLink="recruiter/recruiter-profile/{{id}}">
                 <mat-icon class="material-symbols-outlined">account_circle</mat-icon>
             </a>
-            <a *ngIf="showRecruiterDashboard" class="username" routerLink="recruiter-profile" > {{username}} </a>
-            <a *ngIf="showRecruiterDashboard" class="settings" routerLink="recruiter-profile-settings" >
+            <a *ngIf="showRecruiterDashboard" class="username" routerLink="recruiter/recruiter-profile/{{id}}" > {{username}} </a>
+            <a *ngIf="showRecruiterDashboard" class="settings" routerLink="recruiter/recruiter-profile-settings/{{id}}" >
                 <mat-icon class="material-symbols-outlined">settings</mat-icon>
             </a>
         </div>
 
         <div class="user col-2 details" *ngIf="isLoggedIn">
-            <a *ngIf="showAdminDashboard" class="user-profile" routerLink="admin-profile">
+            <a *ngIf="showAdminDashboard" class="user-profile" routerLink="admin/admin-profile/{{id}}">
                 <mat-icon class="material-symbols-outlined">account_circle</mat-icon>
             </a>
-            <a *ngIf="showAdminDashboard" class="username" routerLink="admin-profile" > {{username}} </a>
-            <a *ngIf="showAdminDashboard" class="settings" routerLink="admin-profile-settings" >
+            <a *ngIf="showAdminDashboard" class="username" routerLink="admin/admin-profile/{{id}}" > {{username}} </a>
+            <a *ngIf="showAdminDashboard" class="settings" routerLink="admin/admin-profile-settings/{{id}}" >
                 <mat-icon class="material-symbols-outlined">settings</mat-icon>
             </a>
         </div>
@@ -72,5 +72,6 @@
         </div>
     </mat-toolbar>
 
-    <router-outlet></router-outlet>
 </div>
+
+<router-outlet></router-outlet>

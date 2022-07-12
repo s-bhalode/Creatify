@@ -63,27 +63,27 @@
                     <form #UpdateUserData="ngForm" class="col-8" (ngSubmit)="getUserFormData(UpdateUserData.value)" >
                         <div class="form-group" >
                             <label for="">Name</label>
-                            <input  formControlName="Name" type="text" class="form-control" placeholder="Name" value="designer.username">
+                            <input  formControlName="Name" type="text" class="form-control" placeholder="Name" value="{{designer.username}}">
                         </div>
     
                         <div class="form-group">
                             <label for="">Bio</label>
-                            <input formControlName="Bio" type="text" class="form-control bio" placeholder="Add your Bio" value="designer.bio">
+                            <input formControlName="Bio" type="text" class="form-control bio" placeholder="Add your Bio" value="{{designer.bio}}">
                         </div>
     
                         <div class="form-group">
                             <label for="">Skills</label>
-                            <input formControlName="Skills" type="text" class="form-control" placeholder="Skills" value="designer.skills">
+                            <input formControlName="Skills" type="text" class="form-control" placeholder="Skills" value="{{designer.skills}}">
                         </div>
     
                         <div class="form-group">
                             <label for="">Contact</label>
-                            <input formControlName="Email" type="text" class="form-control" placeholder="Email" value="designer.email">
+                            <input formControlName="Email" type="text" class="form-control" placeholder="Email" value="{{designer.email}}">
                         </div>
     
                         <div class="form-group">
                             <label for="">Portfolio / Resume</label>
-                            <input formControlName="Portfolio" type="url" class="form-control" placeholder="https//:....." value="designer.portfolio_url">
+                            <input formControlName="Portfolio" type="url" class="form-control" placeholder="https//:....." value="{{designer.portfolio_url}}">
                         </div>
                         <!-- {{EditProfile.value | json}} -->
                         <button class="btn save-btn ml-2">save</button>

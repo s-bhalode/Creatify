@@ -1,29 +1,79 @@
 <div class="container">
     <mat-toolbar class="navbar row">
-        <div class="search col-2">
+        <div class="search col-2" *ngIf="isLoggedIn">
             <span>
                 <mat-icon class="material-symbols-outlined">search</mat-icon>
             </span>
             <input type="text" placeholder="Search" />
         </div>
-        <div class="tabs col-7">
-            <a routerLink="" >Home</a>
-            <a routerLink="" >Post</a>
-            <a routerLink="" >Activity</a>
-            <a routerLink="" >Jobs</a>
-            <a routerLink="" >Connections</a>
+        <div class="tabs col-7 designer-menu" *ngIf="isLoggedIn">
+            <a *ngIf="showDesignerDashboard" routerLink="designer/" >Home</a>
+            <a *ngIf="showDesignerDashboard" routerLink="designer/designer-post">Post</a>
+            <a *ngIf="showDesignerDashboard" routerLink="designer/designer-activity" >Activity</a>
+            <a *ngIf="showDesignerDashboard" routerLink="designer/designer-jobs">Jobs</a>
+            <a *ngIf="showDesignerDashboard" routerLink="designer/designer-network" >Connections</a>
+
         </div>
-        <div class="user col-2">
-            <span class="user-profile">
+        <div class="tabs col-7 recruiter-menu" *ngIf="isLoggedIn">
+            <a *ngIf="showRecruiterDashboard" routerLink="recruiter/" >Home</a>
+            <a *ngIf="showRecruiterDashboard" routerLink="recruiter/recruiter-activity" >Activity</a>
+            <a *ngIf="showRecruiterDashboard" routerLink="recruiter/recruiter-network" >Network</a>
+            <button *ngIf="showRecruiterDashboard" (click)="openPostDialog1()" class="post-btn" >Post Job</button>
+        </div>
+
+        <div class="tabs col-7 admin-menu" *ngIf="isLoggedIn">
+            <h2 *ngIf="showAdminDashboard">ADMIN_PANEL</h2>
+        </div>
+
+        <div class="user col-2 details" *ngIf="isLoggedIn">
+            <a *ngIf="showDesignerDashboard" class="user-profile" routerLink="designer/designer-profile/{{id}}">
                 <mat-icon class="material-symbols-outlined">account_circle</mat-icon>
-            </span>
-            <span class="username">Username</span>
-            <span class="settings">
+            </a>
+            <a *ngIf="showDesignerDashboard" class="username" routerLink="designer/designer-profile/{{id}}" > {{username}} 
+            </a>
+            <a *ngIf="showDesignerDashboard" class="settings" routerLink="designer/designer-profile-settings/{{id}}" >
                 <mat-icon class="material-symbols-outlined">settings</mat-icon>
-            </span>
+            </a>
+        </div>
+
+        <div class="user col-2 details" *ngIf="isLoggedIn ">
+            <a *ngIf="showRecruiterDashboard" class="user-profile" routerLink="recruiter/recruiter-profile/{{id}}">
+                <mat-icon class="material-symbols-outlined">account_circle</mat-icon>
+            </a>
+            <a *ngIf="showRecruiterDashboard" class="username" routerLink="recruiter/recruiter-profile/{{id}}" > {{username}} </a>
+            <a *ngIf="showRecruiterDashboard" class="settings" routerLink="recruiter/recruiter-profile-settings/{{id}}" >
+                <mat-icon class="material-symbols-outlined">settings</mat-icon>
+            </a>
+        </div>
+
+        <div class="user col-2 details" *ngIf="isLoggedIn">
+            <a *ngIf="showAdminDashboard" class="user-profile" routerLink="admin/admin-profile/{{id}}">
+                <mat-icon class="material-symbols-outlined">account_circle</mat-icon>
+            </a>
+            <a *ngIf="showAdminDashboard" class="username" routerLink="admin/admin-profile/{{id}}" > {{username}} </a>
+            <a *ngIf="showAdminDashboard" class="settings" routerLink="admin/admin-profile-settings/{{id}}" >
+                <mat-icon class="material-symbols-outlined">settings</mat-icon>
+            </a>
+        </div>
+
+        <div class="before-login" *ngIf="!isLoggedIn">
+            <div class="header">
+                <span>Creatify</span>
+            </div>
+            <div class="join">
+                <a routerLink="register">SignUp</a>
+                <a routerLink="login">SignIn</a>
+            </div>
+        </div>
+        <div class="logout" *ngIf="isLoggedIn">
+            <a (click)="logout()">
+                <mat-icon class="material-symbols-outlined">power_settings_new</mat-icon>
+            </a>
         </div>
     </mat-toolbar>
     
 </div>
 
 <router-outlet></router-outlet>
+
+

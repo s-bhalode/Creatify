@@ -14,6 +14,11 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
   ],
   imports: [
     CommonModule
+  ],
+  exports : [
+    AdminDashboardComponent,
+    AdminProfileComponent,
+    AdminProfileSettingsComponent
   ]
 })
 export class AdminModule { }

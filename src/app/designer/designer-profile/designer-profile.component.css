@@ -1,0 +1,100 @@
+.container1{
+    background-color: rgb(255, 255, 255);
+    height: 180px;
+    display: flex;
+    border-radius: 19px;
+    border-style: outset;
+    margin: 30px 50px;
+    padding: 0px 0px;
+    color: aqua;
+    width: 92%;
+}
+.profile{
+    text-decoration: none;
+    font-size: 18px;
+    margin: 107px 15px;
+    padding: 13px 30px;
+    display: block; 
+    list-style: none;
+    color: black;
+}
+.connection ,.rating ,.connect ,.message {
+    text-decoration: none;
+    font-size: 14px;
+    margin: 70px 24px;
+    padding: 3px 20px;
+    display: flex; 
+    justify-content: center;
+    list-style: none;
+    border: 3px solid blueviolet; 
+    color: rgb(46, 58, 228);
+    border-radius: 15px; 
+}
+.rating ,.connect ,.message {
+    padding: 3px 40px;
+}
+.description{
+    height: 120px;
+    width: 92%;
+    margin:50px;
+    padding: 0px;
+    border-radius: 15px;
+    border-style: outset;
+    background-color: rgb(255, 255, 255);
+}
+.discrip{
+   color: blueviolet; 
+}
+.decript{
+    font-size: 25px;
+    font-weight: 400;
+    margin: 10px 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.post{
+    height: 250px;
+    width: 50em;
+    margin:10px 50px 50px 65px;
+    padding: 0px;
+    border-radius: 15px;
+    border-style: outset;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+}
+.shares{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blueviolet;
+}
+.skills{
+    height: fit-content;
+}
+.user-skill, .recent-activity{
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.user-skill{
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border-style: outset;
+}
+.recent-activity{
+    height: 138px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-style: outset;
+}
+.post-container{
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+}
+.icon-common{
+    margin-right: 20px;
+}
+.star{
+    color: rgb(227 227 21);
+}

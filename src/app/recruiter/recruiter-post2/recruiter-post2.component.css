@@ -1,0 +1,75 @@
+.arrow-back, .close-btn{
+    cursor: pointer;
+}
+.mat-dialog-title{
+    display: inline-block;
+    margin-left: 17.5vw;
+    font-size: 20px;
+}
+.arrow-back{
+    float: left;
+}
+.close-btn{
+    float: right;
+}
+.container{
+    width: 45vw;
+    height: fit-content;
+}
+
+.share-btn{
+    border-radius: 5px;
+    padding: 5px 30px 5px 30px;
+    background-color: #D4FEF8;
+    border: 1.5px solid #13476A;
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 5px #808b93;
+}
+mat-dialog-content{
+    display: flexbox;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.photo-library{
+    font-size: 100px;
+    margin-top: 100px;
+    color: #13476A;
+}
+.image-pic{
+    display: inline-flex;
+}
+.job-details{
+    float: right;
+    margin-right: 50px;
+}
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.input1, .input2, .input3, .input4, .input5{
+    display: block;
+}  
+.mat-form-field{
+    width: 20vw;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: azure;
+    border-radius: 4px;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label{
+    color: #13476A;
+    font-size: bold !important;
+    letter-spacing: 1px;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #13476A !important;
+  }
+
+
+
+
+
+

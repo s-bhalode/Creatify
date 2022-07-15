@@ -28,6 +28,8 @@ import { AuthGuard } from './services/auth.guard';
 import { AdminAuthGuard } from './services/admin-auth.guard';
 import { DesignerAuthGuard } from './services/designer-auth.guard';
 import { RecruiterAuthGuard } from './services/recruiter-auth.guard';
+import { RecruiterPost1Component } from './recruiter/recruiter-post1/recruiter-post1.component';
+import { RecruiterPost2Component } from './recruiter/recruiter-post2/recruiter-post2.component';
 
 
 @NgModule({

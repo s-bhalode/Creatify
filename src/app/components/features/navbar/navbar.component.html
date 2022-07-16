@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <mat-toolbar class="navbar row">
         <div class="search col-2" *ngIf="isLoggedIn">
             <span>
@@ -18,7 +18,7 @@
             <a *ngIf="showRecruiterDashboard" routerLink="recruiter/" >Home</a>
             <a *ngIf="showRecruiterDashboard" routerLink="recruiter/recruiter-activity" >Activity</a>
             <a *ngIf="showRecruiterDashboard" routerLink="recruiter/recruiter-network" >Network</a>
-            <button *ngIf="showRecruiterDashboard" routerLink="recruiter/recruiter-post" class="post-btn" >Post</button>
+            <button *ngIf="showRecruiterDashboard" (click)="openPostDialog1()" class="post-btn" >Post Job</button>
         </div>
 
         <div class="tabs col-7 admin-menu" *ngIf="isLoggedIn">
@@ -71,7 +71,9 @@
             </a>
         </div>
     </mat-toolbar>
-
+    
 </div>
 
 <router-outlet></router-outlet>
+
+

@@ -1,10 +1,10 @@
-<div class="container" id="main-container">
-    <!-- profile  -->
+<!--<div class="container" id="main-container">
+  
     <div class="container1 user-view ">
         <img src="" alt="">
         <span>
             <a href="#" class="profile-view " #username>Anuv_jain_121121</a>
-            <!-- <a href="#" class="profile"> Graphic Designer</a> -->
+          
         </span>
         <div class="container2">
             <span> <a href="#" class="Posts "><mat-icon class="material-symbols-outlined common-icon">
@@ -24,34 +24,112 @@
     </mat-icon>Rating</a></span>
         </div>
     </div>
-    <!-- edit profile -->
-    <div class="Add-profile-info">
-        <div class="Edit-profile">
-            <div>
-                <h3 class="edit">Edit Profile</h3>
+        <div class=" Edit-profile">
+            <h3 class="edit">Edit Profile</h3>
+        </div>
+             
+                <div class="row">
+                    <div>
+                        <div><input type="text" value="{{designer.username}}"></div>
+                        <div><input type="text" value="{{designer.bio}}"></div>
+                        <div><input type="text" value="{{designer.skills}}"></div>
+                        <div><input type="text" value="{{designer.email}}"></div>
+                        <div><input type="text" value="{{designer.portfolio_url}}"></div>
+                    </div>
+                     
+                </div>
+</div>-->
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+<div class="container">
+    <!-- user profile -->
+
+    <div class="row top-user-view">
+       <div class="col-3">
+        <span>
+            <a href="#" class="profile-view username">{{designer.username}}</a>
+            <a href="#" class="role">{{designer.role}}</a>
+        </span>
+       </div> 
+
+       <div class="col-3">
+        <div>
+            <a href="#" class="Post" >
+                <mat-icon class="material-symbols-outlined common-icon">
+                    filter
+                </mat-icon> Posts </a>
+        </div>
+       </div>
+
+       <div class="col-3">
+        <div >
+            <span> <a href="#" class="Connection">
+                <mat-icon class="material-symbols-outlined common-icon">
+                    group
+                </mat-icon> Connection </a></span>
+        </div>
+       </div>
+
+        <div class="col-3">
+         <div>
+                <span> <a href="#"  class="Rating" >
+                    <mat-icon class="material-symbols-outlined common-icon">
+                        hotel_class
+                    </mat-icon> Rating </a></span>
+         </div>
+        </div>
+
+    </div>
+        
+<!-- Edit profile -->
+    <div class=" bottom-edit-profile">
+        <div class=" common-text">
+            <p>Edit profile</p> 
+        </div>
+
+     <!--Form field -->
+       <div class="row">
+       <div class="">
+        <form  [formGroup]="userProfileData" (ngSubmit)="getUserFormData(userProfileData.value)">
+            <div class="row">
+                <!-- <div class="col-1">
+
+                </div> -->
+                <div class=" col-6 update-box">
+                    <label for="name" class="label-font">Name</label>
+                    <input id="name"  type="text" class="form-control" placeholder="Name" formControlName="name" value="{{designer.username}}" >
+    
+                    <label for="bio" class="label-font">Bio</label>
+                    <input  type="text" class="form-control bio" placeholder="Add your Bio" formControlName="bio" value="{{designer.bio}}">
+    
+                    <label for="skills" class="label-font">Skills</label>
+                    <input  type="text" class="form-control" placeholder="Skills" formControlName="skills" value="{{designer.skills}}" >
+    
+                    <label for="email" class="label-font">Contact</label>
+                    <input  type="text" class="form-control" placeholder="Email" formControlName="email" value="{{designer.email}}">
+    
+                    <label for="portfolio_url" class="label-font">Portfolio / Resume</label>
+                    <input  type="url" class="form-control" placeholder="https//:....." formControlName="portfolio_url" value="{{designer.portfolio_url}}">
+                </div>
+               <div class="col-4">
+               <div class="">
+                <mat-icon class="material-symbols-outlined img-icon">account_circle</mat-icon>
+                <button class="btn btn-secondary choose-profile" > Choose Image</button>
+               </div>
+                <button type="sumbit" class="btn btn-primary save-btn sim">Save</button>
+               </div> 
             </div>
             
-             <div class="form-box">
-                <div class="form-group">
-                    <h2>Name</h2>
-                    <input type="text" class="form-control" id="usr" placeholder="David warner">
-                </div>
-                <div class="form-group">
-                    <h2>Bio</h2>
-                    <input type="text" class="form-control user-bio" id="bio" placeholder="Add your bio">
-                </div>
-                <div class="form-group">
-                   <h2>Contact</h2>
-                    <input type="text" class="form-control" id="contact" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <h2>Portfolio / Resume</h2>
-                    <input type="text" class="form-control" id="portfolio" placeholder="http://.....">
-                </div>
-             </div>
-            <!-- <button class="btn save-btn ">Save</button> -->
+       </form>
+       </div>
 
-        </div>
+       <!-- ///////////////////////////////////////////////////// -->
+       <div class=" right-save-box">
+        <!-- <button type="sumbit" class="btn save-btn ">Save</button> -->
+       </div>
+
+       </div>
+
     </div>
-    <!-- form-group -->
 </div>

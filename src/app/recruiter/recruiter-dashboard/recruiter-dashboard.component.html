@@ -1,5 +1,159 @@
-<p>recruiter-dashboard works!</p>
+<div class="container">
+    <!-- main row -->
+    <div class="row mid-box">
 
-<h1>
-    {{content}}
-</h1>
+        <div class="col-8 left-side">
+
+            <div class="row First-row">
+                <div class="col-12 company-profile ">
+                    <h2 class="heading"> Complete Your Company Profile</h2>
+                    <div class="btn-no1">
+                        <button class="btn-company">Complete profile</button>
+                    </div>
+                </div>
+            </div>
+            <!-- second row -->
+            <div class="row second-row">
+                <div class="col-2 no2-row-alone">
+                    <p class="kalar">
+                        <mat-icon class="material-symbols-outlined icons-babar">image</mat-icon>Job Posted
+                    </p>
+                </div>
+                <div class="col-2 no2-row-alone">
+                    <p class="kalar">
+                        <mat-icon class="material-symbols-outlined icons-babar">visibility</mat-icon>Job View
+                    </p>
+                </div>
+                <div class="col-2 no2-row-alone">
+                    <p class="kalar">
+                        <mat-icon class="material-symbols-outlined icons-babar"><span class="material-symbols-outlined">
+                                supervisor_account
+                            </span></mat-icon>Applications
+                    </p>
+                </div>
+                <div class="col-2 no2-row-alone">
+                    <p class="kalar">
+                        <mat-icon class="material-symbols-outlined icons-babar"><span class="material-symbols-outlined">
+                                account_circle_full
+                            </span></mat-icon>Shortlisted
+                    </p>
+                </div>
+            </div>
+            <!-- Third row -->
+            <div class="row Third-row">
+                <div class="col-12">
+                    <h2 class="heading">In Previous Month</h2>
+                </div>
+            </div>
+            <!-- Fourth row -->
+            <div class="row  Fourth-row">
+                <h2 class="Candidate-list">Candidate List</h2>
+                <!-- <table>
+                    <tr class="black-bold">
+                      <th>Candidate</th>
+                      <th>Job</th>
+                      <th>Evolution</th>
+                      <th>Date</th>
+                    </tr>
+                    <tr class="kalar">
+                      <td>John dee</td>
+                      <td>Graphic designer</td>
+                      <td>88%</td>
+                      <td>26 th feb</td>
+                    </tr>
+                    <tr>
+                        <td>John dee</td>
+                        <td>Graphic designer</td>
+                        <td>88%</td>
+                        <td>26 th feb</td>
+                    </tr>
+                    <tr>
+                        <td>John dee</td>
+                      <td>Graphic designer</td>
+                      <td>88%</td>
+                      <td>26 th feb</td>
+                      </tr>
+                  </table> -->
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Candidate</th>
+                            <th scope="col">Job</th>
+                            <th scope="col">Evolution</th>
+                            <th scope="col">Dates</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">John dee </th>
+                            <td>Graphic designer</td>
+                            <td>88%</td>
+                            <td>26th,may</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-3 right-side">
+            <div class="row right-side-row1">
+                <div class="col-12">
+                    <h2 class="heading next-heading">Your next steps</h2>
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item next-list">
+                            <input type="checkbox" class="check-tick"> <a href="#" class="next-step-list">Confirm
+                                Email</a>
+                        </li>
+                        <li class="list-group-item next-list">
+                            <input type="checkbox" class="check-tick"> <a href="#" class="next-step-list">Complete your
+                                company profile to 100%</a>
+                            <mat-icon class="material-symbols-outlines icons-steps-right">
+                                arrow_circle_right </mat-icon>
+                        </li>
+                        <li class="list-group-item next-list">
+                            <input type="checkbox" class="check-tick"><a href="#" class="next-step-list">Post your first
+                                job</a>
+                            <mat-icon class="material-symbols-outlines icons-steps-right">
+                                arrow_circle_right </mat-icon>
+                        </li>
+                        <li class="list-group-item next-list">
+                            <input type="checkbox" class="check-tick"><a href="#" class="next-step-list">Promote your
+                                job</a>
+                            <mat-icon class="material-symbols-outlines icons-steps-right">
+                                arrow_circle_right </mat-icon>
+                        </li>
+                    </ul>
+
+                    <!-- bottom row right -->
+                    <div class="row right-bottom-row">
+                        <div class="flwg">
+                            <h2>Job | Follow</h2></div>
+                        <ul class="list-group list-group-flush">
+                            <div *ngFor="let jobDetails of jobs">
+                                <li class="list-group-item">{{ jobDetails }} <br> 25 candidates </li>
+                            </div>
+                            <!-- <li class="list-group-item"></li>
+                            <li class="list-group-item"></li>
+                            <li class="list-group-item"></li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

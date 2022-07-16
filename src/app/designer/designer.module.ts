@@ -10,6 +10,7 @@ import { DesignerProfileSettingsComponent } from './designer-profile-settings/de
 import { DesignerDashboardComponent } from './designer-dashboard/designer-dashboard.component';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
@@ -30,6 +31,9 @@ import { MatInputModule } from '@angular/material/input';
     CommonModule,
     RouterModule,
     MatIconModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatIconModule,
     MatCheckboxModule,
     MatSelectModule,
     MatAutocompleteModule,
@@ -49,4 +53,8 @@ import { MatInputModule } from '@angular/material/input';
   ],
   schemas : [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class DesignerModule { }
+export class DesignerModule {
+    
+     
+
+ }

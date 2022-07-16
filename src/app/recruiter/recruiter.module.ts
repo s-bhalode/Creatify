@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatStepperModule} from '@angular/material/stepper';
 import { RecruiterPostComponent } from './recruiter-post/recruiter-post.component';
+import { RecruiterSearchProfileComponent } from './recruiter-search-profile/recruiter-search-profile.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RecruiterPostComponent } from './recruiter-post/recruiter-post.componen
     RecruiterProfileComponent,
     RecruiterProfileSettingsComponent,
     RecruiterPostComponent,
-    RecruiterPostComponent
+    RecruiterPostComponent,
+    RecruiterSearchProfileComponent
   ],
   imports: [
     CommonModule,

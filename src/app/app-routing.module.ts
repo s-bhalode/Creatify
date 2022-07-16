@@ -23,7 +23,7 @@ import {RecruiterActivityComponent} from './recruiter/recruiter-activity/recruit
 import {RecruiterNetworkComponent} from './recruiter/recruiter-network/recruiter-network.component';
 import {RecruiterProfileComponent} from './recruiter/recruiter-profile/recruiter-profile.component';
 import {RecruiterProfileSettingsComponent} from './recruiter/recruiter-profile-settings/recruiter-profile-settings.component';
-
+import {RecruiterPostComponent} from './recruiter/recruiter-post/recruiter-post.component';
 
 import {AuthGuard} from './services/auth.guard';
 import {DesignerAuthGuard} from './services/designer-auth.guard';

@@ -16,6 +16,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { DesignerSearchProfileComponent } from './designer-search-profile/designer-search-profile.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MatInputModule } from '@angular/material/input';
     DesignerNetworkComponent,
     DesignerPostComponent,
     DesignerProfileSettingsComponent,
+    DesignerSearchProfileComponent,
   ],
   imports: [
     CommonModule,

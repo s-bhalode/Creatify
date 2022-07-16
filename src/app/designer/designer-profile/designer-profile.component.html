@@ -1,53 +1,99 @@
-<div class="container" id="main-container">
-    <!-- profile  -->
-    <div class="container1 user-view ">
-        <img src="" alt="">
-        <span>
-            <a href="#" class="profile" #username>Anuv_jain_121121</a>
-            <!-- <a href="#" class="profile"> Graphic Designer</a> -->
-        </span>
-        <div class="container2">
-            <span> <a href="#" class="connection"><mat-icon class="material-symbols-outlined icon-common">group</mat-icon>Connections</a></span>
+<div class="container" >
+    <div class="row">
+        <div class="col-7 left-side-bar">
+            <div class="row left-bar">
+                <div class="row user-profile">
+                    <div class="col-3"> <a href="#" class="username">Anuv_jain_121121</a></div>
+                    <div class="col-3">
+                           <div>
+                            <span> <a href="#" class="Post" >
+                                <mat-icon class="material-symbols-outlined common-icon">
+                                    filter
+                                </mat-icon> Posts </a></span>
+                           </div>
+                    </div>
+        
+        
+                    <div class="col-3">
+                        <div >
+                            <span> <a href="#" class="Connection">
+                                <mat-icon class="material-symbols-outlined common-icon">
+                                    group
+                                </mat-icon> Connection </a></span>
+                        </div>
+                    </div>
+        
+                    <div class="col-3">
+        
+                        <div>
+                            <span> <a href="#"  class="Rating" >
+                                <mat-icon class="material-symbols-outlined common-icon">
+                                    hotel_class
+                                </mat-icon> Rating </a></span>
+                        </div>
+        
+                    </div>
+                </div>
+        
+                <div class="row description">
+                    <div class="col-12">
+                        <h2 class="font-colouring descrip">Description</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-bar ">
+                <div class="col-6 post">
+        
+                    <h2 class="font-colouring">Post</h2>
+        
+                </div>
+                <div class="col-6">
+        
+                    <div class="row skills">
+                        <div class="col-12">
+                            <h2 class="font-colouring">Skills</h2>
+                        </div>
+                    </div>
+        
+                    <div class="row activity">
+                        <div class="col-12">
+                            <h2 class="font-colouring">Recent Activity</h2>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            
+            
         </div>
-        <div class="container3">
-            <span><a href="#" class="rating"><mat-icon class="material-symbols-outlined icon-common star">star</mat-icon>Rating</a></span>
+        <div class="col-3 right-side-bar">
+            <div class="row manage-activity">
+                <h2 class="font-colouring">Manage my Network </h2>
+                <div class="network">
+                    <div class="conn">
+                        <span class="icon-dada"><mat-icon class="material-symbols-outlined ">group</mat-icon></span>
+                        <a href="#" >Connection</a>
+                    </div>
+                    <div class="interest"><mat-icon class="material-symbols-outlined icon-dada" >thumb_up_off</mat-icon><a href="#">Interests</a></div>
+                    <div class="follow"><mat-icon class="material-symbols-outlined icon-dada" >person_add</mat-icon><a href="#">Follow</a></div>
+                </div>
+            </div>
+            <div class="row pending-request">
+                <h2 class="font-colouring">Pending Request</h2>
+                <ul class=" request-come">
+                    <li class="req"><mat-icon class="material-symbols-outlined " >person</mat-icon><a href="" class=" request-come"> XYZ<br>Graphic designer </a><mat-icon class="material-symbols-outlined icon-dada" >task_alt</mat-icon> </li>
+                    <li class="req"><mat-icon class="material-symbols-outlined " >person</mat-icon><a href="" class=" request-come"> XYZ<br>Graphic designer </a><mat-icon class="material-symbols-outlined icon-dada" >task_alt</mat-icon> </li>
+                    <li class="req"><mat-icon class="material-symbols-outlined " >person</mat-icon><a href="" class=" request-come"> XYZ<br>Graphic designer </a><mat-icon class="material-symbols-outlined icon-dada" >task_alt</mat-icon> </li>    
+                </ul>
+            </div>
         </div>
-        <div class="container4">
-            <span><a href="#" class="connect"><mat-icon class="material-symbols-outlined icon-common">person</mat-icon>Connect</a></span>
-        </div>
-        <div class="container5">
-            <span> <a href="#" class="message"><mat-icon class="material-symbols-outlined icon-common">sms</mat-icon>Message</a>
-            </span>
-        </div>
-
+    
+        
+    
     </div>
-    
-    <!-- description -->
-    <span>
-        <div class="description">
-            <div class="discrip user-about">
-                <h3 class="decript">Description</h3>
-            </div>
-        </div>
-    </span>
-    <!-- POST -->
-   
-    <span>
-        <div class=" row ">
-            <div class="post col-8">
-                <div class="shares">100 Posts</div>
-            </div>
-            <div class="skills col-4">
-                <div class="user-skill">
-                    Skills
-                </div>
-                <div class="recent-activity">
-                    recent activity
-                </div>
-            </div>
-        </div>
-    </span>
-    
 
-
+    
 </div>
+
+
+<router-outlet></router-outlet>

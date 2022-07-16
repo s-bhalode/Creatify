@@ -1,100 +1,143 @@
-.container1{
+
+ /* .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
+    border: 2px solid green;
+    
+}  */
+
+.container .row{
+    display: flex;
+    justify-content:center;
+}
+.user-profile{
+    height: 150px;
     background-color: rgb(255, 255, 255);
-    height: 180px;
+    margin-top: 30px;
+    /* margin-right: 400px;  */
     display: flex;
     border-radius: 19px;
-    border-style: outset;
-    margin: 30px 50px;
-    padding: 0px 0px;
-    color: aqua;
-    width: 92%;
 }
-.profile{
-    text-decoration: none;
-    font-size: 18px;
-    margin: 107px 15px;
-    padding: 13px 30px;
-    display: block; 
-    list-style: none;
-    color: black;
-}
-.connection ,.rating ,.connect ,.message {
-    text-decoration: none;
-    font-size: 14px;
-    margin: 70px 24px;
-    padding: 3px 20px;
-    display: flex; 
-    justify-content: center;
-    list-style: none;
-    border: 3px solid blueviolet; 
-    color: rgb(46, 58, 228);
-    border-radius: 15px; 
-}
-.rating ,.connect ,.message {
-    padding: 3px 40px;
-}
+
 .description{
-    height: 120px;
-    width: 92%;
-    margin:50px;
-    padding: 0px;
-    border-radius: 15px;
-    border-style: outset;
-    background-color: rgb(255, 255, 255);
+   background-color: rgb(255, 255, 255);
+    /* margin-right: 400px; */
+    margin-top: 25px;
+    height: 100px;
+    display: flex;
+    border-radius: 19px;
 }
-.discrip{
-   color: blueviolet; 
-}
-.decript{
-    font-size: 25px;
-    font-weight: 400;
-    margin: 10px 40px;
-    font-family: Arial, Helvetica, sans-serif;
+
+.bottom-bar{
+   height: 400px;
+   margin-top: 25px;
+   /* margin-left: -20px; */
+   /* margin-right: 390px; */
 }
 .post{
-    height: 250px;
-    width: 50em;
-    margin:10px 50px 50px 65px;
-    padding: 0px;
-    border-radius: 15px;
-    border-style: outset;
     display: flex;
+    border-radius: 19px;
+    /* border-style: outset; */
+    border: 1px solid rgb(162, 160, 160);
+    box-shadow: 2px 5px 5px gray;
     background-color: rgb(255, 255, 255);
-}
-.shares{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: blueviolet;
+   
 }
 .skills{
-    height: fit-content;
-}
-.user-skill, .recent-activity{
-    padding: 15px;
-    border-radius: 15px;
-    margin-top: 10px;
-}
-.user-skill{
-    height: 100px;
-    background-color: rgb(255, 255, 255);
-    border-style: outset;
-}
-.recent-activity{
-    height: 138px;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    border-style: outset;
-}
-.post-container{
+    height: 200px;
+    /* margin: 10px; */
     display: flex;
+    border-radius: 19px;
+    background-color: rgb(255, 255, 255); 
+    margin : 5px 0 0 10px;
+}
+.activity{
+    height: 300px;
+    /* margin: 10px; */
+    display: flex;
+    margin : 10px 0 0 10px;
+    border-radius: 19px;
+    background-color: rgb(255, 255, 255);
+}
+.Connection, .Rating ,.Post, .username {
+    margin: 60px 0px;;
+    font-size: 20px;
+    display: flex; 
     justify-content: center;
-    margin-top: -50px;
+    text-decoration: none;
+    list-style: none;
+    color: rgb(46, 58, 228);
 }
-.icon-common{
+.username{
+    margin-top: 90px;
+    font-size: 19px;
+    color: black ;
+}
+.common-icon{
+     margin-right: 8px;
+     
+}
+.font-colouring{
+    color: black;
+    margin: 10px 12px;
+
+}
+.descrip{
+    margin-left: 0px;
+}
+.left-side-bar{
+    margin-right: 50px;
+}
+
+.right-side-bar{
+    border: 2px solid black;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+.manage-activity{
+    height: 200px;
+    margin: 20px;
+    margin-top: 25x;
+    border-radius: 12  px;
+}
+.pending-request{
+    height: 300px;
+    margin: 20px;
+    margin-top: 50px;
+    border-radius: 12px;
+}
+.pending-request span{
+    height: 50px;
+}
+.post ,.skills ,.activity ,.description ,.user-profile ,.manage-activity ,.pending-request{
+    border: 1px solid rgb(162, 160, 160);
+    box-shadow: 2px 5px 5px gray;
+    background-color: rgb(255, 255, 255);
+}
+.conn ,.follow, .interest{
+    display: flex;
+    /* justify-content: center; */
+    text-decoration: none;
+    color: blueviolet;
+    font-size: 19px;
+    margin: 10px 15px;
+}
+.conn>a ,.follow >a, .interest >a{
+    text-decoration: none;
+    align-items: baseline;
+}
+.icon-dada{
     margin-right: 20px;
+    /* margin-bottom: 10px; */
 }
-.star{
-    color: rgb(227 227 21);
+.request-come{
+    list-style: none;
+    text-decoration: none;
+    font-size: 16px;
+}
+.req{
+    display: flex;
+    /* justify-content: center; */
+    margin: 10px 10px;
+    list-style: none;
+    text-decoration: none;
 }

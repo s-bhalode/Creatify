@@ -1,53 +1,52 @@
-.arrow-back, .close-btn{
-    cursor: pointer;
-}
-.mat-dialog-title{
-    display: inline-block;
-    margin-left: 17.5vw;
-    font-size: 20px;
-}
-.arrow-back{
-    float: left;
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .close-btn{
-    float: right;
+    cursor: pointer;
+    margin-left: auto;
 }
 .container{
     width: 45vw;
     height: fit-content;
 }
 
-.share-btn{
+.share-btn, .back-btn, .next-btn{
     border-radius: 5px;
     padding: 5px 30px 5px 30px;
     background-color: #D4FEF8;
     border: 1.5px solid #13476A;
-    font-weight: 500;
+    font-weight: 600;
+    color: #13476A;
     letter-spacing: 1px;
     box-shadow: 1px 1px 5px #808b93;
 }
-mat-dialog-content{
-    display: flexbox;
-    justify-content: space-between;
+.photo-library1{
+    font-size: 100px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    margin-left: 18.5vw;
+    color: #13476A;
 }
-.photo-library{
+label p {
+    margin-left: 19vw;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+input{
+    display: none;
+}
+.photo-library2{
     font-size: 100px;
     margin-top: 100px;
     color: #13476A;
 }
-.image-pic{
-    display: inline-flex;
-}
 .job-details{
-    float: right;
-    margin-right: 50px;
+    margin-top: 50px;
 }
-:host {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.action-btn{
+    margin-top: 20px;
 }
 .input1, .input2, .input3, .input4, .input5{
     display: block;
@@ -68,8 +67,6 @@ mat-dialog-content{
     background-color: #13476A !important;
   }
 
-
-
-
-
-
+::ng-deep .mat-horizontal-stepper-header{
+    height: 50px !important;
+}

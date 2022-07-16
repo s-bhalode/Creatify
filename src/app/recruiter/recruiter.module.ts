@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import {MatIconModule} from '@angular/material/icon';
@@ -9,6 +9,8 @@ import { RecruiterProfileComponent } from './recruiter-profile/recruiter-profile
 import { RecruiterProfileSettingsComponent } from './recruiter-profile-settings/recruiter-profile-settings.component';
 import { RecruiterDashboardComponent } from './recruiter-dashboard/recruiter-dashboard.component';
 
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormField, MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,7 @@ import { RecruiterDashboardComponent } from './recruiter-dashboard/recruiter-das
     RecruiterNetworkComponent,
     RecruiterPostComponent,
     RecruiterProfileComponent,
-    RecruiterProfileSettingsComponent
+    RecruiterProfileSettingsComponent,
   ],
   imports: [
     CommonModule,

@@ -1,18 +1,16 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import {TokenStorageService} from '../../services/token-storage.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
+export class RegisterComponent implements OnInit {
 
-export class LoginComponent implements OnInit {
-
-  shouldAdd : boolean = false;
+  shouldAdd : boolean = true;
   isLoggedIn : boolean = false;
   isSuccessful : boolean = false;
   isRegisterFailed : boolean = false;
@@ -20,18 +18,19 @@ export class LoginComponent implements OnInit {
   showLoginForm : boolean = true;
   errorMessage = '';
   roles : string[] = [];
+  roleDashboard : any;
 
   constructor(private authService : AuthService,
-              private tokenStorage : TokenStorageService,
-              private router : Router) { }
+              private tokenStorage : TokenStorageService) { }
 
-  ngOnInit(): void {  
+
+  ngOnInit(): void {
     console.log(this.signUp.valueChanges.subscribe);
     if(this.tokenStorage.getToken()){
       this.isLoggedIn = true;
       this.roles = this.tokenStorage.getUser().role;
       console.log(this.roles);
-      this.router.navigate([this.roles]);
+      this.roleDashboard = this.roles + "-dashboard";
     }
   }
 
@@ -80,6 +79,7 @@ export class LoginComponent implements OnInit {
 
   getUserRegisterFormData(data : any){
    const {username, email, password, role} = data;
+   console.log(data);
 
     this.authService.register(username, email, password, role).subscribe(
       data => {
@@ -96,5 +96,7 @@ export class LoginComponent implements OnInit {
     );
 
   }
+
+
 
 }

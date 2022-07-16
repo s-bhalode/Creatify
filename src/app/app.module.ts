@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,11 +27,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { HomeComponent } from './components/home/home.component';
 
+import { AuthGuard } from './services/auth.guard';
+import { AdminAuthGuard } from './services/admin-auth.guard';
+import { DesignerAuthGuard } from './services/designer-auth.guard';
+import { RecruiterAuthGuard } from './services/recruiter-auth.guard';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     NavbarComponent,
     HomeComponent,
   ],
@@ -58,7 +62,7 @@ import { HomeComponent } from './components/home/home.component';
   schemas : [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  providers: [],
+  providers: [AuthGuard, AdminAuthGuard, DesignerAuthGuard, RecruiterAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,11 +11,12 @@ export class UserProfileSettingsService {
    usersettings(){
     return this.http.get(this.url);
    }
-   fetchuserData(){
-    return this.http.get(this.url + ":id" + "/profile-settings");
+   fetchUserData(id :any){
+    return this.http.get(this.url + id + "/profile-settings");
    }
-   updateuserData(data:any ,id : any){
-    return this.http.put(this.url+"/"+id,data);
+   updateUserData(data:any ,id : any){
+    console.log(data);
+    return this.http.put(this.url+id+"/profile-settings",data);
    }
   
 }

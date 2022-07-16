@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators,FormBuilder  } from '@angular/forms';
 import { UserProfileSettingsService } from 'src/app/services/user-profile-settings.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TokenStorageService } from 'src/app/services/token-storage.service';
+
 
 
 @Component({
@@ -11,43 +13,81 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 })
 export class DesignerProfileSettingsComponent implements OnInit {
     designer : any;
-  
-  constructor(private userData : UserProfileSettingsService) { 
-    userData.fetchuserData().subscribe((data) => {
-      console.log(data);
-      this.designer = data;
-    })
-  }
+    userId: any; 
+    user : any;
 
-  ngOnInit(): void {
-  }
+  constructor(private userData : UserProfileSettingsService,
+              private tokenService : TokenStorageService) {
+                
+    const isLoggedIn = tokenService.getToken();  
 
-
-  // EditProfileData = new FormGroup({
-  //   Name: new FormControl('Hardik'),
-  //   Bio: new FormControl('hii !!I am Hardik panwar'),
-  //   Skills: new FormControl('My skill is to make everyone happy '),
-  //   Contact: new FormControl('_.hardikkk._12'),
-  //   Portfolio : new FormControl('https://linkedin')
-  //  });
-   
-   loadApiData(){
-      
-    }
-    // getUserFormData(data:any){
-    //   console.log(data);
-
-    // }
-    getUserFormData(data : any){
-      const {username, email, role, bio ,skills , portfolio_url}=data;
-      this.userData.fetchuserData().subscribe(result => {
-        console.log(result);
+    if(isLoggedIn){
+      this.user = tokenService.getUser();
+      this.userId = this.user.id;
+      // console.log('user id : ' + this.userId);
+      userData.fetchUserData(this.userId).subscribe(data => {
+        console.log(data);
+        this.designer =data;
       },
       err => {
         console.log(err);
       })
-    }
-  }
-  // updateuserData(data :any){
+        
 
+    }
+   
+    
+    
+  }
+  // updateUserData(){
+  //   console.log(this.userProfileData.value);
   // }
+
+  ngOnInit(): void {
+  }
+ 
+
+  userProfileData = new FormGroup({
+    name : new FormControl(),
+    bio : new FormControl(),
+    skills : new FormControl(),
+    email : new FormControl(),
+    portfolio_url : new FormControl()
+   });
+
+   
+   getUserFormData(data : any){
+    console.log(this.userId);
+    console.log(this.userProfileData.value);
+    const {username, email, role, bio ,skills , portfolio_url}=data;
+    // console.log(this.userProfileData.value);
+    this.userData.updateUserData(data,this.userId).subscribe(result => {
+      console.log(result);
+    },
+    err => {
+      console.log(err);
+    })
+
+
+  }
+
+ 
+    // getUserFormData(data : any){
+    //   const {username, email, role, bio ,skills , portfolio_url}=data;
+    //   this.userData.fetchUserData(this.userId).subscribe(result => {
+    //     console.log(result);
+    //   },
+    //   err => {
+    //     console.log(err);
+    //   })
+    // }
+
+
+
+
+
+
+
+  }
+ 
+ 

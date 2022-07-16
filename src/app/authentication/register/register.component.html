@@ -1,4 +1,4 @@
-<div class="container" id="container" [ngClass]="{'right-panel-active' : shouldAdd}" *ngIf="!isLoggedIn">
+<div class="container" id="container" [ngClass]="{'right-panel-active' : shouldAdd}">
     <!-- SIGN-UP  -->
     <div class="form-container sign-up-container">
         <form #registerUserData="ngForm" [formGroup]="signUp" (ngSubmit)="getUserRegisterFormData(registerUserData.value)">
@@ -45,7 +45,7 @@
     </div>
     
     <!-- SIGN-IN  -->
-    <div class="form-container sign-in-container">
+    <div class="form-container sign-in-container" >
         <form #loginUserData="ngForm" [formGroup]="signIn" (ngSubmit)="getUserLoginFormData(loginUserData.value)" >
             <h1 class="signin-title">Sign In</h1>
             <input type="email" placeholder="Email" name="email" formControlName="email" />
@@ -88,7 +88,3 @@
 
 </div>
 
-
-
-
-<router-outlet></router-outlet>

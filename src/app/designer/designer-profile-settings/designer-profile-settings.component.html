@@ -1,10 +1,10 @@
-<div class="container" id="main-container">
-    <!-- profile  -->
+<!--<div class="container" id="main-container">
+  
     <div class="container1 user-view ">
         <img src="" alt="">
         <span>
             <a href="#" class="profile-view " #username>Anuv_jain_121121</a>
-            <!-- <a href="#" class="profile"> Graphic Designer</a> -->
+          
         </span>
         <div class="container2">
             <span> <a href="#" class="Posts "><mat-icon class="material-symbols-outlined common-icon">
@@ -24,72 +24,106 @@
     </mat-icon>Rating</a></span>
         </div>
     </div>
-    <!-- edit profile -->
-    
-        <div class="container Edit-profile">
+        <div class=" Edit-profile">
             <h3 class="edit">Edit Profile</h3>
-            <!-- form-group -->
-            <!-- <div class="row"> -->
-                
-                <!-- <div class="col-8">
-                    <div class="form-box">
-                        <div class="form-group">
-                            <h2>Name</h2>
-                            <input type="text" class="form-control" id="usr" placeholder="David warner">
-                        </div>
-                        <div class="form-group">
-                            <h2>Bio</h2>
-                            <input type="text" class="form-control user-bio" id="bio" placeholder="Add your bio">
-                        </div>
-                        <div class="form-group">
-                            <h2>Skills</h2>
-                             <input type="text" class="form-control" id="contact" placeholder="Skills">
-                         </div>
-                        <div class="form-group">
-                           <h2>Contact</h2>
-                            <input type="text" class="form-control" id="contact" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <h2>Portfolio / Resume</h2>
-                            <input type="text" class="form-control" id="portfolio" placeholder="http://.....">
-                        </div>
-                        <div class="btn col-4"> <button class=" save-btn ">Save</button></div>
-                     </div>
+        </div>
+             
+                <div class="row">
+                    <div>
+                        <div><input type="text" value="{{designer.username}}"></div>
+                        <div><input type="text" value="{{designer.bio}}"></div>
+                        <div><input type="text" value="{{designer.skills}}"></div>
+                        <div><input type="text" value="{{designer.email}}"></div>
+                        <div><input type="text" value="{{designer.portfolio_url}}"></div>
+                    </div>
                      
                 </div>
-            </div> -->
-                <!-- Form group -->
-                <div class="row">
-                    <form #UpdateUserData="ngForm" class="col-8" (ngSubmit)="getUserFormData(UpdateUserData.value)" >
-                        <div class="form-group" >
-                            <label for="">Name</label>
-                            <input  formControlName="Name" type="text" class="form-control" placeholder="Name" value="{{designer.username}}">
-                        </div>
+</div>-->
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+<div class="container">
+    <!-- user profile -->
+
+    <div class="row top-user-view">
+       <div class="col-3">
+        <span>
+            <a href="#" class="profile-view username">{{designer.username}}</a>
+        </span>
+       </div> 
+
+       <div class="col-3">
+        <div>
+            <a href="#" class="Post" >
+                <mat-icon class="material-symbols-outlined common-icon">
+                    filter
+                </mat-icon> Posts </a>
+        </div>
+       </div>
+
+       <div class="col-3">
+        <div >
+            <span> <a href="#" class="Connection">
+                <mat-icon class="material-symbols-outlined common-icon">
+                    group
+                </mat-icon> Connection </a></span>
+        </div>
+       </div>
+
+        <div class="col-3">
+         <div>
+                <span> <a href="#"  class="Rating" >
+                    <mat-icon class="material-symbols-outlined common-icon">
+                        hotel_class
+                    </mat-icon> Rating </a></span>
+         </div>
+        </div>
+
+    </div>
+        
+<!-- Edit profile -->
+    <div class="row bottom-edit-profile">
+        <div class="col-12 common-text">
+            <p>Edit profile</p> 
+        </div>
+
+     <!--Form field -->
+       <div class="row">
+       <div class="">
+        <form  [formGroup]="userProfileData" (ngSubmit)="getUserFormData(userProfileData.value)">
+            <div class="row justify-content-between">
+                <div class="col-6">
+                    <label for="name">Name</label>
+                    <input id="name"  type="text" class="form-control" placeholder="Name" formControlName="name" value="{{designer.username}}" >
     
-                        <div class="form-group">
-                            <label for="">Bio</label>
-                            <input formControlName="Bio" type="text" class="form-control bio" placeholder="Add your Bio" value="{{designer.bio}}">
-                        </div>
+                    <label for="bio">Bio</label>
+                    <input  type="text" class="form-control bio" placeholder="Add your Bio" formControlName="bio" value="{{designer.bio}}">
     
-                        <div class="form-group">
-                            <label for="">Skills</label>
-                            <input formControlName="Skills" type="text" class="form-control" placeholder="Skills" value="{{designer.skills}}">
-                        </div>
+                    <label for="skills">Skills</label>
+                    <input  type="text" class="form-control" placeholder="Skills" formControlName="skills" value="{{designer.skills}}" >
     
-                        <div class="form-group">
-                            <label for="">Contact</label>
-                            <input formControlName="Email" type="text" class="form-control" placeholder="Email" value="{{designer.email}}">
-                        </div>
+                    <label for="email">Contact</label>
+                    <input  type="text" class="form-control" placeholder="Email" formControlName="email" value="{{designer.email}}">
     
-                        <div class="form-group">
-                            <label for="">Portfolio / Resume</label>
-                            <input formControlName="Portfolio" type="url" class="form-control" placeholder="https//:....." value="{{designer.portfolio_url}}">
-                        </div>
-                        <!-- {{EditProfile.value | json}} -->
-                        <button class="btn save-btn ml-2">save</button>
-                    </form>
-                    
+                    <label for="portfolio_url">Portfolio / Resume</label>
+                    <input  type="url" class="form-control" placeholder="https//:....." formControlName="portfolio_url" value="{{designer.portfolio_url}}">
                 </div>
-                
+               <div class="col-3">
+                <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-secondary"> <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" /></button></div>
+                <button type="sumbit" class="btn btn-primary save-btn sim">Save</button>
+               </div> 
+            </div>
+            
+       </form>
+       </div>
+
+       <!-- ///////////////////////////////////////////////////// -->
+       <div class=" right-save-box">
+        <!-- <button type="sumbit" class="btn save-btn ">Save</button> -->
+       </div>
+
+
+       </div>
+
     </div>
 </div>

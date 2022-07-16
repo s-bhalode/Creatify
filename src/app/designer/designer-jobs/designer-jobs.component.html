@@ -1,124 +1,104 @@
-<!-- <p>designer-jobs works!</p> -->
-<div class="container">
-  <div class="row">
-    <div class="job-nav col-8">
-      <div class="row">
-        <div class="col-12">
-          <div class="inputs">
-            <div class="input-1">
-              <mat-icon
-                aria-hidden="false"
-                class="search"
-                aria-label="Example home icon"
-                >search</mat-icon
-              >
-
-              <input type="search" placeholder="Job Title or Keyword" />
+<form>
+  <div class="container jobs-content">
+    <div class="row justify-content-center">
+      <div class="col-7 search-and-job-data">
+        <div class="row search-section">
+          <div class="row job-location-search justify-content-between">
+            <div class="col-5 profile-search">
+              <mat-form-field appearance="fill">
+                <mat-label>
+                  <p><mat-icon class="material-symbols-outlined search-icon">search</mat-icon> Job Profile</p> 
+                </mat-label>
+                <input matInput>
+              </mat-form-field>
             </div>
-            <div class="input-2">
-              <span>
-                <mat-icon
-                  aria-hidden="false"
-                  class="search"
-                  aria-label="Example home icon"
-                  >search</mat-icon
-                >
-              </span>
-              <input type="search" placeholder="Country or Location" />
+            <div class="col-5 location-search">
+              <mat-form-field appearance="fill">
+                <mat-label>
+                  <p><mat-icon class="material-symbols-outlined search-icon">search</mat-icon> Location</p> 
+                </mat-label>
+                <input matInput>
+              </mat-form-field>
             </div>
           </div>
-          <hr />
-          <div class="drp">
-            <div class="company dropdown">
-              <select name="jobs">
-                <option>Company Name</option>
-                <option value="ShubhamPvt">ShubhamPvt</option>
-              </select>
+          <div class="row company-jobType-selection justify-content-between">
+            <div class="col-5 company-search">
+              <mat-form-field appearance="fill">
+                <mat-label>Company Name</mat-label>
+                <mat-select [(ngModel)]="selectedValue" name="food">
+                  <mat-option *ngFor="let company of companies" [value]="company.value">
+                    {{company.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
             </div>
-
-            <div class="salary dropdown">
-              <select name="salary">
-                <option>Salary</option>
-                <option value="28lakh">28Lakh</option>
-                <option value="1lakh">1Lakh</option>
-              </select>
+            
+            <div class="col-5 job-type-selection">
+              <mat-form-field appearance="fill">
+                <mat-label>Job Type</mat-label>
+                <mat-select>
+                  <mat-option value="one">Full Time</mat-option>
+                  <mat-option value="two">Part Time</mat-option>
+                </mat-select>
+              </mat-form-field>
             </div>
-
-            <div class="Work dropdown">
-              <select name="work">
-                <option>Type of Work</option>
-                <option value="Part-time">Part Time</option>
-                <option value="Full-time">Full Time</option>
-              </select>
-            </div>
+  
           </div>
         </div>
-      </div>
-      <div class="col-12">
-        <div class="row">
-          <div class="col-12">
-            <!-- /* Job Details */ -->
-            <div class="jobs">
-              <h4>Jobs</h4>
-              <select name="jobs">
-                <option value="Most-Recent">Most Recent</option>
-                <option value="Highest Paid">Highest Paid</option>
-              </select>
+
+        <div class="jobs-info-section">
+          <div class="row justify-content-between">
+            <div class="col-2 jobs">
+              <h2>Jobs</h2>
             </div>
-
-            <div class="job-details">
-              <div class="company-name">
-                <h3>Company Name</h3>
-                <p>Time</p>
+            <div class="col-3 job-sort">
+              <mat-form-field appearance="fill">
+                <mat-label>Sort</mat-label>
+                <mat-select>
+                  <mat-option value="one">Alphabetically</mat-option>
+                  <mat-option value="two">Most Recent</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="job-info" *ngFor="let job of jobs">
+            <div class="row">
+              <div class="col-2">
+                <mat-icon class="material-symbols-outlined">diamond</mat-icon>
               </div>
-
-              <div class="job-specification">
-                <h4>Web Flow</h4>
-                <p>11-15</p>
-                <h5>$100k-300k</h5>
+              <div class="col-8">
+                <h2>UI Designer</h2>
+                <div class="row">
+                  <div class="col-3">
+                  <p>Full Time</p>
+                  </div>
+                  <div class="col-4">
+                    <p>Company Name</p>
+                  </div>
+                </div>
               </div>
-
-              <div class="jobs-detailss">
-                <p class="jobs-type">Full Time</p>
-                <p class="jobs-type">UI Designer</p>
+              <div class="col-2">
+                <p>5 hrs ago</p>
               </div>
             </div>
           </div>
+          
         </div>
-      </div>
-    </div>
+        </div>
 
-    <div class="filter-jobs col-4">
-      <p>Filter</p>
-      <section class="filter-jobs-checkboxes">
-        <mat-checkbox class="filter-job-checkbox" color="primary"
-          >Graphic Designer</mat-checkbox
-        >
-        <mat-checkbox class="filter-job-checkbox" color="primary"
-          >3D Animator</mat-checkbox
-        >
-        <mat-checkbox class="filter-job-checkbox" color="primary"
-          >3D Designer</mat-checkbox
-        >
-        <mat-checkbox class="filter-job-checkbox" color="primary"
-          >Video Editor</mat-checkbox
-        >
-        <mat-checkbox class="filter-job-checkbox" color="primary"
-          >Vector Designer</mat-checkbox
-        >
-        <mat-checkbox class="filter-job-checkbox" color="primary"
-          >Skech Artist</mat-checkbox
-        >
-        <mat-checkbox class="filter-job-checkbox" color="primary"
-          >UI Designer</mat-checkbox
-        >
-        <mat-checkbox class="filter-job-checkbox" color="primary"
-          >Game Designer</mat-checkbox
-        >
-        <mat-checkbox class="filter-job-checkbox" color="primary"
-          >2D Designer</mat-checkbox
-        >
-      </section>
-    </div>
+      <div class="col-2 filter-section">
+        <section [formGroup]="profiles">
+          <h4>Popular Profiles</h4>
+          <p><mat-checkbox formControlName="threeDAnimators">3D Animators</mat-checkbox></p>
+          <p><mat-checkbox formControlName="gameDesigner">Game Designer</mat-checkbox></p>
+          <p><mat-checkbox formControlName="graphicsDesigner">Graphics Designer</mat-checkbox></p>
+          <p><mat-checkbox formControlName="sketchArtist">Sketch Artist</mat-checkbox></p>
+          <p><mat-checkbox formControlName="uiUxDesigner">UI/UX Designer</mat-checkbox></p>
+          <p><mat-checkbox formControlName="vectorDesigner">Vector Designer</mat-checkbox></p>
+          <p><mat-checkbox formControlName="vedioEditors">Vedio Editors</mat-checkbox></p>
+        </section>
+      </div>
+
   </div>
-</div>
+  </div>
+</form>

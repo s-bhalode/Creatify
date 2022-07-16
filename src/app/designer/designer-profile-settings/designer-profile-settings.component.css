@@ -1,4 +1,4 @@
-/* :root{
+:root{
     --navBg : #D4FEF8;
     --boxShadow : #808b93;
     --searchBg : #cfd3d3;
@@ -81,14 +81,14 @@
     justify-content:center;
 }
 .Connection, .Rating ,.Post, .username {
-    margin-top: 60px;
+    margin-top: 80px;
     padding: 0px 0px;
     font-size: 20px;
     display: flex; 
     justify-content: center;
     text-decoration: none;
     list-style: none;
-    color: rgb(46, 58, 228);
+    color:#13476A;
 }
 .top-user-view{
     height: 150px;
@@ -118,36 +118,57 @@
 .username{
     margin-top: 100px;
 }
+.role{
+    font-size: 20px;
+    display: flex; 
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    color:#13476A;
+}
 .common-text>p{
     font-size: 20px;
-    /* margin-left: 25px; */
     margin-top: 20px;
-    color: rgb(46, 58, 228);
+    color:#13476A;
 }
 .form-control{
     color: #000000;
     background-color: #D4FEF8;
+    /* background-color: rgba(19, 71, 106, 1); */
     border-radius: 10px;
     block-size: fit-content;
     height: 40px;
     margin-right: 50px;
 }
-.left-update-box{
-    /* margin-left: 10px;  */
-    margin-right: 0px;
-   
+.bio{
+    height: 70px;
+}
+.label-font{
+    font-size: 21px;
+    font-weight: 400;
+    margin-top: 15px;
+    color:#13476A;
 } 
-
 .save-btn{
-    /* margin-top: 250px; */
-    /* margin-left: 250px; */
-    /* float: right; */
     padding: 0px;
     width: 140px;
     border-radius: 10px;
-    background-color: darkblue;
+    background-color:rgba(56, 30, 128, 1);
     color: aliceblue;
 }
-.sim{
+.sim, .img-icon {
     margin-top: 100px;
+    margin-left: 150px;
+}
+.img-icon{
+    font-size: 140px;
+}
+.choose-profile{
+    padding: 0px;
+    width:  150px;
+    height: 30px;
+    float: right;
+    border-radius: 10px;
+    background-color:rgba(221, 233, 234, 1);
+    color:rgba(108, 114, 118, 1);
 }

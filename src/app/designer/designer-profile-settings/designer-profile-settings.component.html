@@ -49,6 +49,7 @@
        <div class="col-3">
         <span>
             <a href="#" class="profile-view username">{{designer.username}}</a>
+            <a href="#" class="role">{{designer.role}}</a>
         </span>
        </div> 
 
@@ -82,8 +83,8 @@
     </div>
         
 <!-- Edit profile -->
-    <div class="row bottom-edit-profile">
-        <div class="col-12 common-text">
+    <div class=" bottom-edit-profile">
+        <div class=" common-text">
             <p>Edit profile</p> 
         </div>
 
@@ -91,25 +92,31 @@
        <div class="row">
        <div class="">
         <form  [formGroup]="userProfileData" (ngSubmit)="getUserFormData(userProfileData.value)">
-            <div class="row justify-content-between">
-                <div class="col-6">
-                    <label for="name">Name</label>
+            <div class="row">
+                <!-- <div class="col-1">
+
+                </div> -->
+                <div class=" col-6 update-box">
+                    <label for="name" class="label-font">Name</label>
                     <input id="name"  type="text" class="form-control" placeholder="Name" formControlName="name" value="{{designer.username}}" >
     
-                    <label for="bio">Bio</label>
+                    <label for="bio" class="label-font">Bio</label>
                     <input  type="text" class="form-control bio" placeholder="Add your Bio" formControlName="bio" value="{{designer.bio}}">
     
-                    <label for="skills">Skills</label>
+                    <label for="skills" class="label-font">Skills</label>
                     <input  type="text" class="form-control" placeholder="Skills" formControlName="skills" value="{{designer.skills}}" >
     
-                    <label for="email">Contact</label>
+                    <label for="email" class="label-font">Contact</label>
                     <input  type="text" class="form-control" placeholder="Email" formControlName="email" value="{{designer.email}}">
     
-                    <label for="portfolio_url">Portfolio / Resume</label>
+                    <label for="portfolio_url" class="label-font">Portfolio / Resume</label>
                     <input  type="url" class="form-control" placeholder="https//:....." formControlName="portfolio_url" value="{{designer.portfolio_url}}">
                 </div>
-               <div class="col-3">
-                <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-secondary"> <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" /></button></div>
+               <div class="col-4">
+               <div class="">
+                <mat-icon class="material-symbols-outlined img-icon">account_circle</mat-icon>
+                <button class="btn btn-secondary choose-profile" > Choose Image</button>
+               </div>
                 <button type="sumbit" class="btn btn-primary save-btn sim">Save</button>
                </div> 
             </div>
@@ -121,7 +128,6 @@
        <div class=" right-save-box">
         <!-- <button type="sumbit" class="btn save-btn ">Save</button> -->
        </div>
-
 
        </div>
 

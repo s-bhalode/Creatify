@@ -1,13 +1,14 @@
 import { NgModule, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import {MatIconModule} from '@angular/material/icon';
 import { RecruiterActivityComponent } from './recruiter-activity/recruiter-activity.component';
 import { RecruiterNetworkComponent } from './recruiter-network/recruiter-network.component';
 import { RecruiterProfileComponent } from './recruiter-profile/recruiter-profile.component';
 import { RecruiterProfileSettingsComponent } from './recruiter-profile-settings/recruiter-profile-settings.component';
 import { RecruiterDashboardComponent } from './recruiter-dashboard/recruiter-dashboard.component';
+
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {MatIcon, MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -32,7 +33,6 @@ import { RecruiterPostComponent } from './recruiter-post/recruiter-post.componen
   imports: [
     CommonModule,
     MatIconModule,
-    MatDialogModule,
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,

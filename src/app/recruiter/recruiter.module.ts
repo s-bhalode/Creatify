@@ -9,8 +9,6 @@ import { RecruiterProfileSettingsComponent } from './recruiter-profile-settings/
 import { RecruiterDashboardComponent } from './recruiter-dashboard/recruiter-dashboard.component';
 
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import { RecruiterPost1Component } from './recruiter-post1/recruiter-post1.component';
-import { RecruiterPost2Component } from './recruiter-post2/recruiter-post2.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -19,6 +17,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatStepperModule} from '@angular/material/stepper';
+import { RecruiterPostComponent } from './recruiter-post/recruiter-post.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RecruiterNetworkComponent,
     RecruiterProfileComponent,
     RecruiterProfileSettingsComponent,
-    RecruiterPost1Component,
-    RecruiterPost2Component
+    RecruiterPostComponent,
+    RecruiterPostComponent
   ],
   imports: [
     CommonModule,
@@ -41,11 +41,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatStepperModule
   ],
   exports : [
-    RecruiterPost1Component,
-    RecruiterPost2Component,
+    RecruiterPostComponent,
     RecruiterActivityComponent,
     RecruiterDashboardComponent,
     RecruiterNetworkComponent,

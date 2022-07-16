@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import {RecruiterPost1Component} from '../recruiter-post1/recruiter-post1.component';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormGroup, FormControl } from '@angular/forms';
 import {RecruiterGalleryService} from '../../services/recruiter-gallery.service';
 import {Router} from '@angular/router';
 
-@Component({
-  selector: 'app-recruiter-post2',
-  templateUrl: './recruiter-post2.component.html',
-  styleUrls: ['./recruiter-post2.component.css']
-})
-export class RecruiterPost2Component implements OnInit {
 
+@Component({
+  selector: 'app-recruiter-post',
+  templateUrl: './recruiter-post.component.html',
+  styleUrls: ['./recruiter-post.component.css']
+})
+export class RecruiterPostComponent implements OnInit {
+ 
   imageFile : File | undefined;
   isLoadingResult = false;
-
+ 
   constructor(private dialog : MatDialog,
               private recruiterGallery : RecruiterGalleryService,
               private router : Router) { }
@@ -31,9 +31,9 @@ export class RecruiterPost2Component implements OnInit {
     skillsRequirement : new FormControl('')
   });
 
-  openPostDialog1(){
-    this.dialog.open(RecruiterPost1Component);
-  }
+  recruiterPostImageForm = new FormGroup({
+    image : new FormControl(''),
+  });
 
   onSubmit(data : any){
     this.isLoadingResult  = true;
@@ -48,5 +48,6 @@ export class RecruiterPost2Component implements OnInit {
         this.isLoadingResult = false;
       });
   }
+
 
 }

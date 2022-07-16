@@ -1,0 +1,69 @@
+<mat-icon mat-dialog-close class="material-symbols-outlined close-btn">close</mat-icon>
+<mat-dialog-content>
+    <mat-stepper linear #stepper>
+        <mat-step [stepControl]="recruiterPostImageForm" >
+            <form #recruiterPostData="ngForm" [formGroup]="recruiterPostImageForm" >
+                <ng-template matStepLabel>Select Document</ng-template>
+                <div class="container">
+                    <div>
+                        <label for="input-image">
+                            <mat-icon class="material-symbols-outlined photo-library1">photo_library</mat-icon>
+                            <p>Select Image</p>
+                            <input #imageInput accept="image/*" formControlName="imageFile" type="file" required>
+                        </label>
+                    </div>
+                    <mat-dialog-actions align="end">
+                        <button matStepperNext type="submit" class="next-btn">Next</button>
+                    </mat-dialog-actions>
+                </div>
+            </form>
+        </mat-step>
+
+        <mat-step [stepControl]="jobDetailsForm" >
+            <form #jobDetailsData="ngForm" [formGroup]="jobDetailsForm" (ngSubmit)="onSubmit(jobDetailsData.value)" >
+                <ng-template matStepLabel>Fill out job details</ng-template>
+                <div class="container">            
+                    <div class="row justify-content-between">
+                        <div class="image-pic col-4">
+                            <mat-icon class="material-symbols-outlined photo-library2">photo_library</mat-icon>
+                        </div>
+                        <div class="job-details col-6">
+                            <mat-form-field appearance="fill" class="input1">
+                                <mat-label>Company Name</mat-label>
+                                <input matInput name="companyName" formControlName="companyName">
+                            </mat-form-field>
+                            <mat-form-field appearance="fill" class="input2">
+                                <mat-label>Profile Designation</mat-label>
+                                <input matInput name="profileDesignation" formControlName="profileDesignation">
+                            </mat-form-field>
+                            <mat-form-field appearance="fill" class="input3">
+                                <mat-label>Job Type</mat-label>
+                                <mat-select>
+                                <mat-option value="one">Full Time</mat-option>
+                                <mat-option value="two">Part Time</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field appearance="fill" class="input4">
+                                <mat-label>Location</mat-label>
+                                <input matInput name="location" formControlName="location">
+                            </mat-form-field>
+                            <mat-form-field appearance="fill" class="input5">
+                                <mat-label>Skills Requirement</mat-label>
+                                <textarea matInput name="skillsRequirement" formControlName="skillsRequirement"></textarea>
+                            </mat-form-field>                   
+                        </div>
+                    </div>
+                    <div class="row action-btn justify-content-between">
+                        <div class="col-2">
+                            <button type="submit" matStepperPrevious class="back-btn">Back</button>
+                        </div>
+                        <div class="col-2">
+                            <button type="submit" class="share-btn">Share</button>
+                        </div>
+                    </div>
+                </div>    
+            </form> 
+
+        </mat-step>
+    </mat-stepper>
+</mat-dialog-content>

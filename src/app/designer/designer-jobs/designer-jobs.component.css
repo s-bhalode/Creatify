@@ -1,40 +1,56 @@
+.container{
+    background-color: #f8f7f7;
+}
 .search-and-job-data{
     padding: 20px 50px 10px 50px;
-    margin-top: 50px;
+    margin : 50px 50px 0px 0px;
 }
 
-.search-and-job-data, .filter-section, .job-info{
-    border: 2px solid gray;
-}
-
-.search-section, .filter-section{
-    display: grid;
-}
-.filter-section{
-    margin-top: 50px;
-    padding: 20px;
+.search-and-job-data, .filter-section, .job-info, .search-section, .job-type, .company-name, .jobs-info-section{
+    box-shadow: 1px 1px 5px #808b93;
 }
 .job-location-search{
     padding: 0px 0px 15px 0px;
 }
 .company-jobType-selection{
-    /* background-color: aqua; */
+    padding: 0px 0px 15px 0px;
+
+}
+.company-jobType-selection ::ng-deep .mat-form-field-type-mat-select .mat-form-field-label, .job-sort ::ng-deep .mat-form-field-type-mat-select .mat-form-field-label{
+    margin-left: 30px;
 }
 .search-icon{
     margin-right: 30px;
     margin-left: 20px;
+    font-size: 50px;
 }
 .search-section{
-    /* background-color: yellow; */
+    background-color: white;
+    padding: 20px 20px 10px 40px;
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+}
+.search-section .row>*{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
 }
 .profile-search mat-form-field, .location-search mat-form-field, .company-search mat-form-field, .job-type-selection mat-form-field{
-    /* width: 200px; */
     width: 100%;
     height: 40px;
 }
+.profile-search mat-label p mat-icon, .location-search mat-label p mat-icon{
+    font-size: 20px;
+    font-weight: 600;
+}
+.profile-search mat-label p span, .location-search mat-label p span{
+    vertical-align: super;
+}
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
     padding: 5px 0px 2px 0px !important;
-    background-color: #D4FEF8;
+    /* background-color: #D4FEF8; */
+    background-color: transparent;
+    border-bottom: 2px solid #13476A;
 }
 ::ng-deep .mat-form-field-wrapper{
     padding-bottom: 0px !important; 
@@ -52,8 +68,9 @@
     padding: 5px !important;
 }
 .jobs-info-section{
-    border: 2px solid palevioletred;
+    padding: 30px 30px 10px 30px;
     margin-top: 50px;
+    background-color: white;
 }
 .jobs{
     margin-left: 20px;
@@ -61,12 +78,72 @@
 .job-sort{
     margin-right: 50px;
 }
+
 .job-sort mat-form-field{
-    width: 150px;
+    width: 100%;
     height: 25px;
 }
 .job-info{
     padding: 10px;
     border-radius: 10px;
-    margin: 10px;
+    margin: 20px;
+}
+.job-data{
+    margin-top: 40px;
+}
+.company-logo{
+    color: blueviolet;
+    font-size: 90px;
+}
+.job-type, .company-name{
+    border: none;
+    text-align: center;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 550;
+}
+.job-type{
+    margin-right: 50px;
+    background-color: #FBD2FF;
+    width: 100px;
+}
+.company-name{
+    background-color: #DEF8FE;
+    width: 150px;
+}
+.job-type p, .company-name p{
+    margin-top: 3px;
+}
+.job-type a, .company-name a{
+    text-decoration: none;
+    color: navy;
+}
+
+
+
+
+
+/* -------------------------------------Filter Section ---------------------------- */
+.filter-section{
+    margin-top: 50px;
+    padding: 20px;
+    height: fit-content;
+    background-color: white;
+}
+.filter-section h3 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #13476A;
+}
+.filter-section p {
+    font-weight: 575;
+    letter-spacing: 0.5px;
+    color: #13476A;
+}
+::ng-deep .mat-checkbox-inner-container{
+    background-color: #D4FEF8;
+}
+::ng-deep .mat-checkbox-checked .mat-checkbox-checkmark{
+    background-color: #13476A;
 }

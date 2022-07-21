@@ -8,7 +8,7 @@
         </div>
         <div class="tabs col-7 designer-menu" *ngIf="isLoggedIn">
             <a *ngIf="showDesignerDashboard" routerLink="designer/" >Home</a>
-            <a *ngIf="showDesignerDashboard" routerLink="designer/designer-post">Post</a>
+            <a *ngIf="showDesignerDashboard" (click)="openDesignerPostDialog()" class="designer-post" >Post</a>
             <a *ngIf="showDesignerDashboard" routerLink="designer/designer-activity" >Activity</a>
             <a *ngIf="showDesignerDashboard" routerLink="designer/designer-jobs">Jobs</a>
             <a *ngIf="showDesignerDashboard" routerLink="designer/designer-network" >Connections</a>
@@ -18,7 +18,7 @@
             <a *ngIf="showRecruiterDashboard" routerLink="recruiter/" >Home</a>
             <a *ngIf="showRecruiterDashboard" routerLink="recruiter/recruiter-activity" >Activity</a>
             <a *ngIf="showRecruiterDashboard" routerLink="recruiter/recruiter-network" >Network</a>
-            <button *ngIf="showRecruiterDashboard" (click)="openPostDialog()" class="post-btn" >Post Job</button>
+            <button *ngIf="showRecruiterDashboard" (click)="openRecruiterPostDialog()" class="post-btn" >Post Job</button>
         </div>
 
         <div class="tabs col-7 admin-menu" *ngIf="isLoggedIn">

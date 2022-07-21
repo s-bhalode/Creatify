@@ -1,1 +1,50 @@
-<p>designer post works</p>
+<mat-icon mat-dialog-close class="material-symbols-outlined close-btn">close</mat-icon>
+<mat-dialog-content>
+    <mat-stepper linear #stepper>
+        <mat-step [stepControl]="designerPostImageForm" >
+            <form #recruiterPostData="ngForm" [formGroup]="designerPostImageForm" >
+                <ng-template matStepLabel>Select Document</ng-template>
+                <div class="container">
+                    <div>
+                        <label for="imageInput">
+                            <mat-icon class="material-symbols-outlined photo-library1">photo_library</mat-icon>
+                            <p>Select Image</p>
+                            <input id="imageInput" #imagePicker accept="image/*" type="file" (change)="pickedImage($event)" formControlName="postImage">
+                        </label>
+                    </div>
+                    <mat-dialog-actions align="end">
+                        <button matStepperNext class="next-btn">Next</button>
+                    </mat-dialog-actions>
+                </div>
+            </form>
+        </mat-step>
+
+        <mat-step [stepControl]="designerPostForm" >
+            <form #designerPostDetails="ngForm" [formGroup]="designerPostForm" (ngSubmit)="onSubmit(designerPostForm.value)" >
+                <ng-template matStepLabel>Fill out job details</ng-template>
+                <div class="container">            
+                    <div class="row justify-content-between">
+                        <div class="image-preview col-6" *ngIf="selectedImage !== ''&& selectedImage">
+                            <img [src]="selectedImage" [alt]="designerPostForm.value.caption">
+                        </div>
+                        <div class="job-details col-5">
+                            <mat-form-field appearance="fill" class="input1">
+                                <mat-label>Write Caption ..</mat-label>
+                                <textarea matInput name="caption" formControlName="caption"></textarea>
+                            </mat-form-field>                   
+                        </div>
+                    </div>
+                    <div class="row action-btn justify-content-between">
+                        <div class="col-2">
+                            <button type="submit" matStepperPrevious class="back-btn">Back</button>
+                        </div>
+                        <div class="col-2">
+                            <button type="submit" class="share-btn">Share</button>
+                        </div>
+                    </div>
+                </div>    
+            </form> 
+
+        </mat-step>
+    </mat-stepper>
+</mat-dialog-content>

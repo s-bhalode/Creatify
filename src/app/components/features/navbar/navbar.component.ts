@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {RecruiterPostComponent} from '../../../recruiter/recruiter-post/recruiter-post.component';
 import {TokenStorageService} from '../../../services/token-storage.service';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {DesignerPostComponent} from '../../../designer/designer-post/designer-post.component';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -56,9 +57,11 @@ export class NavbarComponent implements OnInit {
     this.tokenStorageservice.logOut();
     window.location.reload();
   }
-  openPostDialog(){
+  openRecruiterPostDialog(){
     this.dialog.open(RecruiterPostComponent, {disableClose : true });
   }
-  
+  openDesignerPostDialog(){
+    this.dialog.open(DesignerPostComponent, {disableClose : true});
+  }
 
 }

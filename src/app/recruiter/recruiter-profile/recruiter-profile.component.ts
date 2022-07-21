@@ -34,11 +34,7 @@ export class RecruiterProfileComponent implements OnInit {
   }
 
   getGalleryDetails(id : string) : void {
-    this.galleryService.getGalleryById(id).subscribe((data : any) => {
-      this.gallery = data;
-      console.log(this.gallery);
-      this.isLoadingResults = false;
-    });
+    
   }
 
 }

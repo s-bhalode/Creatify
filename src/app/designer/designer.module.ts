@@ -17,6 +17,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { DesignerSearchProfileComponent } from './designer-search-profile/designer-search-profile.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { DesignerSearchProfileComponent } from './designer-search-profile/design
     MatAutocompleteModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatStepperModule,
+    MatDialogModule
   ],
   exports : [
     DesignerJobsComponent,

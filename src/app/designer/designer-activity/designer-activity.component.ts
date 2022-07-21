@@ -12,4 +12,6 @@ export class DesignerActivityComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  activities = [1, 2, 3, 4, 5, 6, 7];
+  views = [1, 2, 3, 4, 5, 6, 7];
 }

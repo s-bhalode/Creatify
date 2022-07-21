@@ -1,1 +1,90 @@
-<p>designer-activity works!</p>
+<div class="container">
+  <div class="row">
+    <!-- left box -->
+    <div class="col-7 left-box">
+      <div class="row">
+        <h3 class="common-text recent-txt">Recent Activity</h3>
+      </div>
+
+      <div class="row recent-activity">
+        <div class="row likes" *ngFor="activity; of: activities">
+          <div class="col-2">
+            <mat-icon class="material-symbols-outlined common-icon"
+              >account_circle</mat-icon
+            >
+          </div>
+          <div class="col-9">abc and other 54 liked your post</div>
+          <hr />
+        </div>
+      </div>
+
+      <div class="row"><h3 class="common-text">This Week</h3></div>
+      <div class="row this-week">
+        <div class="row likes" *ngFor="profile - visit; of: views">
+          <div class="col-2">
+            <mat-icon class="material-symbols-outlined common-icon"
+              >account_circle</mat-icon
+            >
+          </div>
+          <div class="col-9">abc and 1 person viewed your profile</div>
+          <hr />
+        </div>
+      </div>
+    </div>
+    <!-- right box -->
+    <div class="col-4 right-box">
+      <!-- ///////////////////////// -->
+      <div class="row profile-view">
+        <!-- ///////////////////////  -->
+        <div class="row">
+          <mat-icon class="material-symbols-outlined prof"
+            >account_circle</mat-icon>
+        </div>
+        <div class="row">
+          <div class="usrnm">
+            <p>XYZ</p>
+            <p>Graphic Designer</p>
+          </div>
+        </div>
+        <!-- post connection -->
+        <div class="row">
+          <div class="col-6 post-box">
+            <h2>
+              100<br />
+              Posts
+            </h2>
+          </div>
+          <div class="col-4 conn-box">
+            <h2>
+              1K <br />
+              Connections
+            </h2>
+          </div>
+        </div>
+
+        <!-- description -->
+        <div class="row">
+          <div class="col-12 description-box">Description</div>
+        </div>
+        <br />
+        <hr />
+
+        <div class="beee row">
+          <div class="col-1 icon-colummn">
+            <div><mat-icon>mail</mat-icon></div>
+            <div><mat-icon>photo</mat-icon></div>
+          </div>
+
+          <div class="col-6">
+            <div class="space"><a href="#" class="CN"> Email</a></div>
+            <div class="space"><a href="#" class="CN"> Portfolio</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row pending-req">
+
+      </div>
+      </div>
+  </div>
+</div>

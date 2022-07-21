@@ -1,28 +1,28 @@
 <form>
   <div class="container jobs-content">
     <div class="row justify-content-center">
-      <div class="col-7 search-and-job-data">
+      <div class="col-9 search-and-job-data">
         <div class="row search-section">
           <div class="row job-location-search justify-content-between">
-            <div class="col-5 profile-search">
+            <div class="col-4 profile-search">
               <mat-form-field appearance="fill">
                 <mat-label>
-                  <p><mat-icon class="material-symbols-outlined search-icon">search</mat-icon> Job Profile</p> 
+                  <p><mat-icon class="material-symbols-outlined search-icon">search</mat-icon><span>Job Profile</span></p> 
                 </mat-label>
                 <input matInput>
               </mat-form-field>
             </div>
-            <div class="col-5 location-search">
+            <div class="col-4 location-search">
               <mat-form-field appearance="fill">
                 <mat-label>
-                  <p><mat-icon class="material-symbols-outlined search-icon">search</mat-icon> Location</p> 
+                  <p><mat-icon class="material-symbols-outlined search-icon">search</mat-icon><span>Location</span></p> 
                 </mat-label>
                 <input matInput>
               </mat-form-field>
             </div>
           </div>
           <div class="row company-jobType-selection justify-content-between">
-            <div class="col-5 company-search">
+            <div class="col-4 company-search">
               <mat-form-field appearance="fill">
                 <mat-label>Company Name</mat-label>
                 <mat-select [(ngModel)]="selectedValue" name="food">
@@ -33,7 +33,7 @@
               </mat-form-field>
             </div>
             
-            <div class="col-5 job-type-selection">
+            <div class="col-4 job-type-selection">
               <mat-form-field appearance="fill">
                 <mat-label>Job Type</mat-label>
                 <mat-select>
@@ -47,7 +47,7 @@
         </div>
 
         <div class="jobs-info-section">
-          <div class="row justify-content-between">
+          <div class="row justify-content-between mb-5">
             <div class="col-2 jobs">
               <h2>Jobs</h2>
             </div>
@@ -62,22 +62,22 @@
             </div>
           </div>
           <div class="job-info" *ngFor="let job of jobs">
-            <div class="row">
+            <div class="row p-2">
               <div class="col-2">
-                <mat-icon class="material-symbols-outlined">diamond</mat-icon>
+                <mat-icon class="material-symbols-outlined company-logo">diamond</mat-icon>
               </div>
               <div class="col-8">
                 <h2>UI Designer</h2>
-                <div class="row">
-                  <div class="col-3">
-                  <p>Full Time</p>
+                <div class="row job-data">
+                  <div class="col-3 job-type">
+                  <a href=""><p>Full Time</p></a>
                   </div>
-                  <div class="col-4">
-                    <p>Company Name</p>
+                  <div class="col-4 company-name">
+                    <a href=""><p>Company Name</p></a>
                   </div>
                 </div>
               </div>
-              <div class="col-2">
+              <div class="col-2 time-ago">
                 <p>5 hrs ago</p>
               </div>
             </div>
@@ -88,7 +88,7 @@
 
       <div class="col-2 filter-section">
         <section [formGroup]="profiles">
-          <h4>Popular Profiles</h4>
+          <h3>Popular Profiles</h3>
           <p><mat-checkbox formControlName="threeDAnimators">3D Animators</mat-checkbox></p>
           <p><mat-checkbox formControlName="gameDesigner">Game Designer</mat-checkbox></p>
           <p><mat-checkbox formControlName="graphicsDesigner">Graphics Designer</mat-checkbox></p>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormGroup, FormControl } from '@angular/forms';
-import {RecruiterGalleryService} from '../../services/recruiter-gallery.service';
+import {RecruiterGalleryService} from '../../services/recruiterServices/recruiter-gallery.service';
 import {Router} from '@angular/router';
 
 

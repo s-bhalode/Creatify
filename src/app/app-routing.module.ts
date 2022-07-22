@@ -25,10 +25,10 @@ import {RecruiterProfileComponent} from './recruiter/recruiter-profile/recruiter
 import {RecruiterProfileSettingsComponent} from './recruiter/recruiter-profile-settings/recruiter-profile-settings.component';
 import {RecruiterPostComponent} from './recruiter/recruiter-post/recruiter-post.component';
 
-import {AuthGuard} from './services/auth.guard';
-import {DesignerAuthGuard} from './services/designer-auth.guard';
-import {AdminAuthGuard} from './services/admin-auth.guard';
-import {RecruiterAuthGuard} from './services/recruiter-auth.guard';
+import {AuthGuard} from './services/authguardServices/auth.guard';
+import {DesignerAuthGuard} from './services/authguardServices/designer-auth.guard';
+import {AdminAuthGuard} from './services/authguardServices/admin-auth.guard';
+import {RecruiterAuthGuard} from './services/authguardServices/recruiter-auth.guard';
 
 
 const routes: Routes = [

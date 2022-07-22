@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../../services/auth.service';
-import {TokenStorageService} from '../../services/token-storage.service';
+import { AuthService } from '../../services/authServices/auth.service';
+import {TokenStorageService} from '../../services/authServices/token-storage.service';
 
 @Component({
   selector: 'app-register',

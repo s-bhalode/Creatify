@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
-import {DesignerGalleryService} from '../../services/designer-gallery.service';
+import {DesignerGalleryService} from '../../services/designerServices/designer-gallery.service';
 
 @Component({
   selector: 'app-designer-post',

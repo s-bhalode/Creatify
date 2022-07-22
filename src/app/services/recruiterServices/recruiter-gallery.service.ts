@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Observable, throwError} from 'rxjs';
 import {HttpClient, HttpHeaders, HttpErrorResponse, HttpParams, HttpRequest} from '@angular/common/http';
 import {catchError} from 'rxjs/operators';
-import {Gallery} from '../components/features/gallery/recruiterGallery';
+import {Gallery} from '../../components/features/gallery/recruiterGallery';
 
 
 const API_URL = 'http://localhost:3000/recruiter/gallery';

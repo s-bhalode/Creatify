@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators,FormBuilder  } from '@angular/forms';
-import { UserProfileSettingsService } from 'src/app/services/user-profile-settings.service';
+import { UserProfileSettingsService } from 'src/app/services/commonUserServices/user-profile-settings.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TokenStorageService } from 'src/app/services/token-storage.service';
+import { TokenStorageService } from 'src/app/services/authServices/token-storage.service';
 
 
 

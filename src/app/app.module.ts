@@ -27,10 +27,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { HomeComponent } from './components/home/home.component';
 
-import { AuthGuard } from './services/auth.guard';
-import { AdminAuthGuard } from './services/admin-auth.guard';
-import { DesignerAuthGuard } from './services/designer-auth.guard';
-import { RecruiterAuthGuard } from './services/recruiter-auth.guard';
+import { AuthGuard } from './services/authguardServices/auth.guard';
+import { AdminAuthGuard } from './services/authguardServices/admin-auth.guard';
+import { DesignerAuthGuard } from './services/authguardServices/designer-auth.guard';
+import { RecruiterAuthGuard } from './services/authguardServices/recruiter-auth.guard';
 
 
 @NgModule({

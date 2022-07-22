@@ -14,4 +14,6 @@ export class DesignerGalleryService {
   constructor(private http : HttpClient) { }
 
   
+
+  
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {RecruiterGalleryService} from '../../services/recruiter-gallery.service';
+import {RecruiterGalleryService} from '../../services/recruiterServices/recruiter-gallery.service';
 import {Gallery} from '../../components/features/gallery/recruiterGallery';
 
 @Component({

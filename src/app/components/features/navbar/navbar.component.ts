@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RecruiterPostComponent} from '../../../recruiter/recruiter-post/recruiter-post.component';
-import {TokenStorageService} from '../../../services/token-storage.service';
+import {TokenStorageService} from '../../../services/authServices/token-storage.service';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {DesignerPostComponent} from '../../../designer/designer-post/designer-post.component';
 @Component({

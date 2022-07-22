@@ -7,7 +7,7 @@
       </div>
 
       <div class="row recent-activity">
-        <div class="row likes" *ngFor="activity; of: activities">
+        <div class="row likes" *ngFor="let activity of activities">
           <div class="col-2">
             <mat-icon class="material-symbols-outlined common-icon"
               >account_circle</mat-icon
@@ -20,7 +20,7 @@
 
       <div class="row"><h3 class="common-text">This Week</h3></div>
       <div class="row this-week">
-        <div class="row likes" *ngFor="profile - visit; of: views">
+        <div class="row likes" *ngFor="let profilevisit of views">
           <div class="col-2">
             <mat-icon class="material-symbols-outlined common-icon"
               >account_circle</mat-icon
@@ -76,8 +76,9 @@
           </div>
 
           <div class="col-6">
-            <div class="space"><a href="#" class="CN"> Email</a></div>
-            <div class="space"><a href="#" class="CN"> Portfolio</a></div>
+            <div class="space"><a href="#" class="CN"> Contact</a>   </div>
+            <div class="space"><a href="#" class="CN"> Email</a>     </div>
+            <div class="space"><a href="#" class="CN"> Portfolio</a> </div>
           </div>
         </div>
       </div>

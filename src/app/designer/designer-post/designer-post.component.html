@@ -20,7 +20,7 @@
         </mat-step>
 
         <mat-step [stepControl]="designerPostForm" >
-            <form #designerPostDetails="ngForm" [formGroup]="designerPostForm" (ngSubmit)="onSubmit(designerPostForm.value)" >
+            <form #designerPostDetails="ngForm" [formGroup]="designerPostForm" (ngSubmit)="onSubmit()" >
                 <ng-template matStepLabel>Fill out job details</ng-template>
                 <div class="container">            
                     <div class="row justify-content-between">

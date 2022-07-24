@@ -3,6 +3,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {DesignerGalleryService} from '../../services/designerServices/designer-gallery.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-designer-post',
@@ -13,11 +14,11 @@ export class DesignerPostComponent implements OnInit {
 
   selectedFile? : FileList;
   currentFile?: File;
-  selectedImage! : string;
+  selectedImage? : string;
+  fileInfos? : Observable<any>;
 
-  constructor(private dialog : MatDialog,
-              private router : Router,
-              private designerGalleryService : DesignerGalleryService) { }
+  constructor(private router : Router,
+              private designerService : DesignerGalleryService) { }
 
   ngOnInit(): void {
     
@@ -54,8 +55,20 @@ export class DesignerPostComponent implements OnInit {
       }   
   }
 
-  onSubmit(formObj : any){
-
+  onSubmit() : void{
+    if(this.selectedFile){
+      const file : File | null = this.selectedFile.item(0);
+      if(file){
+        this.currentFile = file;
+        console.log(this.currentFile);
+        this.designerService.uploadPost(this.currentFile, this.designerPostForm.get('caption')).subscribe((event : any) => {
+            console.log(event);
+          },
+          (err : any) => {
+            console.log(err);
+          })
+      }
+    }
   }
 
 
